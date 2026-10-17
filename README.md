@@ -1,5 +1,7 @@
 # Jay Ma · Personal Homepage
 
+**Live site: https://akiyamasuguru.github.io/**
+
 A bilingual (English / 中文) personal homepage with a pixel-art, sci-fi look, served by GitHub Pages.
 No build step: plain HTML, CSS and native ES modules.
 
@@ -50,20 +52,15 @@ The hero name is drawn from the small pixel font in `assets/js/pixel.js` (`FONT`
 The language is chosen in this order: `?lang=en` / `?lang=zh` in the URL, the visitor's last choice, then the browser language.
 Visitors switch with the EN / 中 pill in the header, the footer link, or the **L** key.
 
+- English: https://akiyamasuguru.github.io/?lang=en
+- 中文: https://akiyamasuguru.github.io/?lang=zh
+
 ## Easter egg
 
 Type ↑ ↑ ↓ ↓ ← → ← → B A (or click the arrows in the footer) to jump to warp speed. Clicking the name or the avatar scatters its pixels.
-
-## Local preview
-
-ES modules do not load from `file://`, so serve the folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000. Add `?still` to the URL to turn off all motion.
+To turn off all motion, open https://akiyamasuguru.github.io/?still
 
 ## Deploy
 
-Push to `main`; GitHub Pages serves the repository root (Settings → Pages → Deploy from a branch → `main` / root).
+GitHub Pages publishes the repository root of `main` (Settings → Pages → Deploy from a branch → `main` / root) at **https://akiyamasuguru.github.io/**.
+Every push to `main` goes live about a minute later.
