@@ -7,7 +7,7 @@ import zh from './locales/zh.js';
 /* English for strings that only JavaScript shows (everything else is read from the DOM). */
 const en = {
   'meta.title': 'Jay Ma',
-  'meta.desc': 'Jay Ma, M.S. candidate in Condensed Matter Physics at Shanghai University and SINAP, CAS. Research on SiC coatings for molten salt reactors.',
+  'meta.desc': 'Jay Ma builds open-source tools for materials characterization data and researches SiC coatings for molten salt reactors (M.S., Shanghai University and SINAP, CAS).',
   'nav.close': 'Close menu',
   'rs.info.ion': '<b>Ion irradiation</b>Ions stand in for in-reactor radiation damage. SRIM gives the ion range and displacement damage (dpa) profile used to set the irradiation parameters.',
   'rs.info.salt': '<b>Molten salt</b>The reactor coolant. Static corrosion tests show how the salt attacks the coating and which coating structure resists it best.',
@@ -18,6 +18,7 @@ const en = {
   'js.toEn': 'Switch to English',
   'js.toZh': '切换到中文',
   'js.updated': 'Updated',
+  'js.latest': 'latest commit',
 };
 const dicts = {en, zh};
 const root = document.documentElement;

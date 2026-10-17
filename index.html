@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jay Ma</title>
-<meta name="description" content="Jay Ma, M.S. candidate in Condensed Matter Physics at Shanghai University and SINAP, CAS. Research on SiC coatings for molten salt reactors.">
+<meta name="description" content="Jay Ma builds open-source tools for materials characterization data and researches SiC coatings for molten salt reactors (M.S., Shanghai University and SINAP, CAS).">
 <meta name="author" content="Jay Ma">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://akiyamasuguru.github.io/">
@@ -13,13 +13,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://akiyamasuguru.github.io/">
 <meta property="og:title" content="Jay Ma">
-<meta property="og:description" content="M.S. candidate in Condensed Matter Physics at Shanghai University and SINAP, CAS. Research on SiC coatings for molten salt reactors.">
-<meta property="og:image" content="https://akiyamasuguru.github.io/portrait.svg">
+<meta property="og:description" content="Open-source tools for materials characterization data · SiC coatings for molten salt reactors.">
+<meta property="og:image" content="https://akiyamasuguru.github.io/assets/img/avatar-512.png">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='29' fill='%23000' stroke='%23fff' stroke-width='3'/><text x='32' y='40' font-size='20' text-anchor='middle' fill='%23fff' font-family='Arial Narrow,Arial,sans-serif' font-weight='700'>JM</text></svg>">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
 <script>
 /* Pick the language before first paint so Chinese visitors never see an English flash.
-   Order: ?lang= in the URL, then the saved choice, then the browser language. */
+   Order: ?lang= in the URL, then the saved choice, then the browser language.
+   If the pixel effects have not started after 3 s, show the plain fallbacks instead. */
 (function () {
   var d = document.documentElement, q = new URLSearchParams(location.search).get('lang'), s = null;
   try { s = localStorage.getItem('lang'); } catch (e) {}
@@ -27,34 +28,34 @@
   d.className = 'js' + (lang === 'zh' ? ' i18n-wait' : '');
   d.dataset.lang = lang;
   if (lang === 'zh') { d.lang = 'zh-CN'; setTimeout(function () { d.classList.remove('i18n-wait'); }, 1500); }
+  setTimeout(function () { d.classList.add('px-fail'); }, 3000);
 })();
 </script>
-<link rel="preload" href="portrait.svg" as="image" type="image/svg+xml">
+<link rel="preload" href="assets/img/avatar.png" as="image">
 <link rel="modulepreload" href="assets/js/main.js">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=DM+Mono&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=DM+Mono&family=Jersey+10&family=Silkscreen&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
 <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
 
-<a class="skip" href="#about" data-i18n="skip">Skip to content</a>
+<a class="skip" href="#projects" data-i18n="skip">Skip to content</a>
 <canvas id="sky" aria-hidden="true"></canvas>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="Jay Ma, back to top">JAY MA</a>
+  <a class="brand" href="#top" aria-label="Jay Ma, back to top"><img src="assets/img/favicon.png" width="32" height="32" alt=""><span>JAY MA</span></a>
   <nav class="links" aria-label="Sections">
-    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#projects" data-i18n="nav.projects">Projects</a>
     <a href="#research" data-i18n="nav.research">Research</a>
     <a href="#publications" data-i18n="nav.publications">Publications</a>
-    <a href="#projects" data-i18n="nav.projects">Projects</a>
+    <a href="#about" data-i18n="nav.about">About</a>
     <a href="#timeline" data-i18n="nav.timeline">Timeline</a>
     <a href="#methods" data-i18n="nav.methods">Methods</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
   </nav>
-  <div class="clock mono"><i></i><span data-i18n="clock.city">Shanghai</span> <span id="clock">--:--</span></div>
   <button class="lang" type="button" data-lang-toggle aria-label="切换到中文" title="EN / 中文 (L)">
     <span class="lang-thumb" aria-hidden="true"></span><span class="lang-opt" data-opt="en">EN</span><span class="lang-opt" data-opt="zh">中</span>
   </button>
@@ -63,10 +64,10 @@
 
 <aside class="drawer" id="drawer" aria-label="Menu" inert>
   <nav aria-label="Sections">
-    <a href="#about"><span class="mono">01</span><b data-i18n="nav.about">About</b></a>
+    <a href="#projects"><span class="mono">01</span><b data-i18n="nav.projects">Projects</b></a>
     <a href="#research"><span class="mono">02</span><b data-i18n="nav.research">Research</b></a>
     <a href="#publications"><span class="mono">03</span><b data-i18n="nav.publications">Publications</b></a>
-    <a href="#projects"><span class="mono">04</span><b data-i18n="nav.projects">Projects</b></a>
+    <a href="#about"><span class="mono">04</span><b data-i18n="nav.about">About</b></a>
     <a href="#timeline"><span class="mono">05</span><b data-i18n="nav.timeline">Timeline</b></a>
     <a href="#methods"><span class="mono">06</span><b data-i18n="nav.methods">Methods</b></a>
     <a href="#contact"><span class="mono">07</span><b data-i18n="nav.contact">Contact</b></a>
@@ -80,27 +81,35 @@
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="horizon" aria-hidden="true"><div class="sun"></div><div class="planet"></div><div class="flare"></div></div>
+  <div class="scanlines" aria-hidden="true"></div>
   <div class="wrap hero-grid">
-    <div>
-      <p class="overline mono rise" style="--d:.1s" data-i18n="hero.overline">Condensed Matter Physics · Nuclear Materials</p>
-      <h1 class="rise" style="--d:.2s">Jay Ma</h1>
-      <p class="lead rise" style="--d:.35s" data-i18n="hero.lead">M.S. candidate at Shanghai University and the Shanghai Institute of Applied Physics, Chinese Academy of Sciences, working on SiC coatings for molten salt reactors.</p>
-      <div class="cta rise" style="--d:.5s">
-        <a class="btn" href="#research" data-i18n="hero.cta1">Research</a>
-        <a class="btn ghost" href="#contact" data-i18n="hero.cta2">Contact</a>
+    <div class="hero-copy">
+      <p class="overline mono rise" style="--d:.1s"><span class="prompt" aria-hidden="true">&gt;_</span><span data-i18n="hero.overline" data-fx="type">Open source · Condensed matter · Nuclear materials</span><i class="caret" aria-hidden="true"></i></p>
+      <h1 class="name" id="name"><span class="name-text">Jay Ma</span><canvas class="name-canvas" aria-hidden="true"></canvas></h1>
+      <p class="lead rise" style="--d:.45s" data-i18n="hero.lead">I build open-source tools for materials characterization data, and research SiC coatings for molten salt reactors as an M.S. candidate at Shanghai University and the Shanghai Institute of Applied Physics, CAS.</p>
+      <div class="cta rise" style="--d:.6s">
+        <a class="btn" href="#projects" data-i18n="hero.cta1">Open source</a>
+        <a class="btn ghost" href="#research" data-i18n="hero.cta2">Research</a>
       </div>
-      <div class="socials rise" style="--d:.62s">
+      <div class="socials rise" style="--d:.72s">
         <a href="https://github.com/AkiyamaSuguru" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
         <a href="https://orcid.org/0009-0003-9102-7830" target="_blank" rel="noopener" aria-label="ORCID"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zM86.3 186.2H70.9V79.1h15.4v107.1zM78.6 70.5c-5.6 0-10.2-4.6-10.2-10.2s4.6-10.2 10.2-10.2 10.2 4.6 10.2 10.2-4.5 10.2-10.2 10.2zm120.8 63.8c0 29.4-21.7 51.9-54.1 51.9h-42V79.1h42c32.4 0 54.1 22.6 54.1 55.2zm-15.8 0c0-23.4-14.6-41.3-40.9-41.3h-23.9v82.7h23.9c26.3 0 40.9-18 40.9-41.4z"/></svg></a>
         <a href="mailto:jaymamun@outlook.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4.24l-8 5-8-5V6l8 5 8-5v2.24z"/></svg></a>
       </div>
     </div>
-    <figure class="avatar rise" style="--d:.3s" id="avatar">
-      <div class="orbit" aria-hidden="true"></div>
+    <figure class="avatar rise" style="--d:.2s" id="avatar">
+      <svg class="reticle" viewBox="0 0 100 100" aria-hidden="true"><g class="ticks"><path d="M50 1.5V5.2" transform="rotate(0 50 50)"/><path d="M50 2.6V4.2" transform="rotate(6 50 50)"/><path d="M50 2.6V4.2" transform="rotate(12 50 50)"/><path d="M50 2.6V4.2" transform="rotate(18 50 50)"/><path d="M50 2.6V4.2" transform="rotate(24 50 50)"/><path d="M50 1.5V5.2" transform="rotate(30 50 50)"/><path d="M50 2.6V4.2" transform="rotate(36 50 50)"/><path d="M50 2.6V4.2" transform="rotate(42 50 50)"/><path d="M50 2.6V4.2" transform="rotate(48 50 50)"/><path d="M50 2.6V4.2" transform="rotate(54 50 50)"/><path d="M50 1.5V5.2" transform="rotate(60 50 50)"/><path d="M50 2.6V4.2" transform="rotate(66 50 50)"/><path d="M50 2.6V4.2" transform="rotate(72 50 50)"/><path d="M50 2.6V4.2" transform="rotate(78 50 50)"/><path d="M50 2.6V4.2" transform="rotate(84 50 50)"/><path d="M50 1.5V5.2" transform="rotate(90 50 50)"/><path d="M50 2.6V4.2" transform="rotate(96 50 50)"/><path d="M50 2.6V4.2" transform="rotate(102 50 50)"/><path d="M50 2.6V4.2" transform="rotate(108 50 50)"/><path d="M50 2.6V4.2" transform="rotate(114 50 50)"/><path d="M50 1.5V5.2" transform="rotate(120 50 50)"/><path d="M50 2.6V4.2" transform="rotate(126 50 50)"/><path d="M50 2.6V4.2" transform="rotate(132 50 50)"/><path d="M50 2.6V4.2" transform="rotate(138 50 50)"/><path d="M50 2.6V4.2" transform="rotate(144 50 50)"/><path d="M50 1.5V5.2" transform="rotate(150 50 50)"/><path d="M50 2.6V4.2" transform="rotate(156 50 50)"/><path d="M50 2.6V4.2" transform="rotate(162 50 50)"/><path d="M50 2.6V4.2" transform="rotate(168 50 50)"/><path d="M50 2.6V4.2" transform="rotate(174 50 50)"/><path d="M50 1.5V5.2" transform="rotate(180 50 50)"/><path d="M50 2.6V4.2" transform="rotate(186 50 50)"/><path d="M50 2.6V4.2" transform="rotate(192 50 50)"/><path d="M50 2.6V4.2" transform="rotate(198 50 50)"/><path d="M50 2.6V4.2" transform="rotate(204 50 50)"/><path d="M50 1.5V5.2" transform="rotate(210 50 50)"/><path d="M50 2.6V4.2" transform="rotate(216 50 50)"/><path d="M50 2.6V4.2" transform="rotate(222 50 50)"/><path d="M50 2.6V4.2" transform="rotate(228 50 50)"/><path d="M50 2.6V4.2" transform="rotate(234 50 50)"/><path d="M50 1.5V5.2" transform="rotate(240 50 50)"/><path d="M50 2.6V4.2" transform="rotate(246 50 50)"/><path d="M50 2.6V4.2" transform="rotate(252 50 50)"/><path d="M50 2.6V4.2" transform="rotate(258 50 50)"/><path d="M50 2.6V4.2" transform="rotate(264 50 50)"/><path d="M50 1.5V5.2" transform="rotate(270 50 50)"/><path d="M50 2.6V4.2" transform="rotate(276 50 50)"/><path d="M50 2.6V4.2" transform="rotate(282 50 50)"/><path d="M50 2.6V4.2" transform="rotate(288 50 50)"/><path d="M50 2.6V4.2" transform="rotate(294 50 50)"/><path d="M50 1.5V5.2" transform="rotate(300 50 50)"/><path d="M50 2.6V4.2" transform="rotate(306 50 50)"/><path d="M50 2.6V4.2" transform="rotate(312 50 50)"/><path d="M50 2.6V4.2" transform="rotate(318 50 50)"/><path d="M50 2.6V4.2" transform="rotate(324 50 50)"/><path d="M50 1.5V5.2" transform="rotate(330 50 50)"/><path d="M50 2.6V4.2" transform="rotate(336 50 50)"/><path d="M50 2.6V4.2" transform="rotate(342 50 50)"/><path d="M50 2.6V4.2" transform="rotate(348 50 50)"/><path d="M50 2.6V4.2" transform="rotate(354 50 50)"/></g><circle class="sat" cx="50" cy="1.5" r="1.1"/></svg>
       <div class="halo" aria-hidden="true"></div>
-      <img src="portrait.svg" width="400" height="400" alt="Anime-style portrait of Jay Ma in a suit" data-i18n-attr="alt:hero.alt" fetchpriority="high" decoding="async">
-      <figcaption class="mono" data-i18n="hero.loc">Shanghai · China</figcaption>
+      <div class="px-frame">
+        <img src="assets/img/avatar-512.png" width="512" height="512" alt="Pixel-art portrait of Jay Ma in a suit" data-i18n-attr="alt:hero.alt" decoding="async">
+        <canvas aria-hidden="true"></canvas>
+      </div>
+      <figcaption class="mono"><i aria-hidden="true"></i><span data-i18n="hero.loc">Online · Shanghai</span></figcaption>
     </figure>
+  </div>
+  <div class="hero-hud mono" aria-hidden="true">
+    <span>31.23°N · 121.47°E</span>
+    <span><b id="hud-clock">--:--:--</b> UTC+8</span>
   </div>
   <a class="scroll-cue mono" href="#highlights"><span data-i18n="hero.scroll">Scroll</span><i></i></a>
 </section>
@@ -108,32 +117,114 @@
 <!-- ================= HIGHLIGHTS ================= -->
 <section class="band" id="highlights" aria-label="Highlights" data-i18n-attr="aria-label:hl.label">
   <div class="wrap stats">
-    <div class="stat reveal"><div class="num" data-count="10.3" data-dec="1">10.3</div><div class="lbl mono" data-i18n="hl.if">Impact factor · Corrosion Science</div></div>
     <div class="stat reveal"><div class="num" data-count="2">2</div><div class="lbl mono" data-i18n="hl.oss">Open-source projects</div></div>
+    <div class="stat reveal"><div class="num" data-count="10.3" data-dec="1">10.3</div><div class="lbl mono" data-i18n="hl.if">Impact factor · Corrosion Science</div></div>
     <div class="stat reveal"><div class="num">2027</div><div class="lbl mono" data-i18n="hl.grad">Expected M.S. graduation</div></div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="section" id="about">
+<!-- ================= OPEN SOURCE ================= -->
+<section class="section" id="projects">
   <div class="wrap">
-    <p class="eyebrow mono reveal">01</p>
-    <h2 class="title reveal" data-i18n="nav.about">About</h2>
-    <div class="about">
-      <div class="prose reveal">
-        <p data-i18n="about.p1">I am a master's student in Condensed Matter Physics in a joint program between <strong>Shanghai University</strong> and the <strong>Shanghai Institute of Applied Physics (SINAP), Chinese Academy of Sciences</strong>, advised by Prof. Hefei Huang and Prof. Yibing Zhang.</p>
-        <p data-i18n="about.p2">My research concerns <strong>SiC coatings on nuclear graphite</strong> for molten salt reactors: how the deposition temperature affects their structure and stoichiometry, how they corrode in molten salt, and how they respond to ion irradiation.</p>
-        <p data-i18n="about.p3">I also develop open-source Python tools for processing materials characterization data.</p>
-      </div>
-      <dl class="spec reveal">
-        <div><dt data-i18n="about.k.name">Name</dt><dd>Jay Ma</dd></div>
-        <div><dt data-i18n="about.k.program">Program</dt><dd data-i18n="about.v.program">M.S., Condensed Matter Physics</dd></div>
-        <div><dt data-i18n="about.k.inst">Institutions</dt><dd data-i18n="about.v.inst">Shanghai University × SINAP, CAS</dd></div>
-        <div><dt data-i18n="about.k.adv">Advisors</dt><dd data-i18n="about.v.adv">Prof. Hefei Huang · Prof. Yibing Zhang</dd></div>
-        <div><dt data-i18n="about.k.research">Research</dt><dd data-i18n="about.v.research">SiC coatings · Molten salt corrosion · Ion irradiation</dd></div>
-        <div><dt data-i18n="about.k.loc">Location</dt><dd data-i18n="about.v.loc">Shanghai, China</dd></div>
-        <div><dt data-i18n="about.k.grad">Graduation</dt><dd data-i18n="about.v.grad">June 2027 (expected)</dd></div>
-      </dl>
+    <p class="eyebrow mono reveal"><b>01</b><span>~/open-source</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="pj.title">Open source</h2>
+    <p class="section-lead reveal" data-i18n="pj.lead">Python tools I build and maintain for turning raw characterization data into analysis and publication figures.</p>
+    <div class="projects">
+
+      <article class="project hud reveal" data-repo="AkiyamaSuguru/OpenXPSAnalyzer">
+        <div class="win-bar mono"><i></i><i></i><i></i><span>~/OpenXPSAnalyzer</span><span class="repo-meta" data-repo-meta></span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 400 200">
+            <g stroke="rgba(255,255,255,.06)">
+              <path d="M20 40H380M20 80H380M20 120H380"/>
+              <path d="M60 24V160M100 24V160M140 24V160M180 24V160M220 24V160M260 24V160M300 24V160M340 24V160"/>
+            </g>
+            <path d="M20 160H380" stroke="rgba(255,255,255,.3)"/>
+            <g class="fade">
+              <path d="M53.2 139.99 L55.2 139.97 L57.2 139.96 L59.3 139.94 L61.3 139.90 L63.3 139.86 L65.4 139.80 L67.4 139.71 L69.4 139.60 L71.4 139.46 L73.5 139.28 L75.5 139.05 L77.5 138.76 L79.5 138.40 L81.6 137.98 L83.6 137.47 L85.6 136.88 L87.6 136.20 L89.7 135.42 L91.7 134.57 L93.7 133.63 L95.7 132.63 L97.8 131.58 L99.8 130.50 L101.8 129.42 L103.8 128.37 L105.9 127.37 L107.9 126.46 L109.9 125.67 L111.9 125.03 L114.0 124.56 L116.0 124.27 L118.0 124.19 L120.0 124.31 L122.1 124.63 L124.1 125.13 L126.1 125.81 L128.1 126.64 L130.2 127.58 L132.2 128.62 L134.2 129.71 L136.2 130.84 L138.2 131.96 L140.3 133.06 L142.3 134.11 L144.3 135.11 L146.4 136.02 L148.4 136.86 L150.4 137.61 L152.4 138.27 L154.5 138.85 L156.5 139.36 L158.5 139.80 L160.5 140.19 L162.6 140.52 L164.6 140.81 L166.6 141.07 L168.6 141.30 L170.7 141.51 L172.7 141.71 L174.7 141.90 L176.7 142.09 L178.8 142.27 L180.8 142.46 L182.8 142.65 L182.8 142.67 L180.8 142.50 L178.8 142.33 L176.7 142.17 L174.7 142.01 L172.7 141.87 L170.7 141.73 L168.6 141.61 L166.6 141.49 L164.6 141.37 L162.6 141.27 L160.5 141.17 L158.5 141.08 L156.5 140.99 L154.5 140.91 L152.4 140.84 L150.4 140.77 L148.4 140.71 L146.4 140.65 L144.3 140.60 L142.3 140.55 L140.3 140.50 L138.2 140.46 L136.2 140.42 L134.2 140.38 L132.2 140.35 L130.2 140.32 L128.1 140.29 L126.1 140.27 L124.1 140.25 L122.1 140.23 L120.0 140.21 L118.0 140.19 L116.0 140.17 L114.0 140.16 L111.9 140.14 L109.9 140.13 L107.9 140.12 L105.9 140.11 L103.8 140.10 L101.8 140.09 L99.8 140.08 L97.8 140.08 L95.7 140.07 L93.7 140.06 L91.7 140.06 L89.7 140.05 L87.6 140.05 L85.6 140.04 L83.6 140.04 L81.6 140.04 L79.5 140.03 L77.5 140.03 L75.5 140.03 L73.5 140.03 L71.4 140.02 L69.4 140.02 L67.4 140.02 L65.4 140.02 L63.3 140.02 L61.3 140.01 L59.3 140.01 L57.2 140.01 L55.2 140.01 L53.2 140.01Z" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.45)"/>
+              <path d="M178.8 142.26 L180.8 142.39 L182.8 142.51 L184.8 142.61 L186.8 142.68 L188.8 142.72 L190.8 142.71 L192.8 142.63 L194.9 142.46 L196.9 142.17 L198.9 141.74 L200.9 141.14 L202.9 140.33 L204.9 139.30 L206.9 138.01 L208.9 136.44 L210.9 134.57 L212.9 132.40 L214.9 129.94 L216.9 127.22 L218.9 124.26 L220.9 121.14 L222.9 117.92 L225.0 114.68 L227.0 111.54 L229.0 108.60 L231.0 105.97 L233.0 103.74 L235.0 102.01 L237.0 100.85 L239.0 100.33 L241.0 100.45 L243.0 101.24 L245.0 102.65 L247.0 104.64 L249.0 107.12 L251.0 110.02 L253.0 113.23 L255.0 116.63 L257.1 120.12 L259.1 123.61 L261.1 127.01 L263.1 130.23 L265.1 133.22 L267.1 135.95 L269.1 138.39 L271.1 140.52 L273.1 142.36 L275.1 143.92 L277.1 145.21 L279.1 146.27 L281.1 147.13 L283.1 147.80 L285.1 148.33 L287.2 148.74 L289.2 149.05 L291.2 149.29 L293.2 149.46 L295.2 149.59 L297.2 149.68 L299.2 149.75 L301.2 149.80 L301.2 149.88 L299.2 149.86 L297.2 149.85 L295.2 149.84 L293.2 149.82 L291.2 149.80 L289.2 149.79 L287.2 149.77 L285.1 149.74 L283.1 149.72 L281.1 149.70 L279.1 149.67 L277.1 149.64 L275.1 149.60 L273.1 149.57 L271.1 149.53 L269.1 149.49 L267.1 149.44 L265.1 149.39 L263.1 149.33 L261.1 149.27 L259.1 149.21 L257.1 149.14 L255.0 149.07 L253.0 148.99 L251.0 148.90 L249.0 148.81 L247.0 148.71 L245.0 148.60 L243.0 148.49 L241.0 148.37 L239.0 148.24 L237.0 148.11 L235.0 147.96 L233.0 147.81 L231.0 147.65 L229.0 147.48 L227.0 147.31 L225.0 147.12 L222.9 146.93 L220.9 146.74 L218.9 146.53 L216.9 146.32 L214.9 146.11 L212.9 145.89 L210.9 145.67 L208.9 145.44 L206.9 145.21 L204.9 144.99 L202.9 144.76 L200.9 144.53 L198.9 144.31 L196.9 144.09 L194.9 143.87 L192.8 143.65 L190.8 143.44 L188.8 143.24 L186.8 143.04 L184.8 142.86 L182.8 142.67 L180.8 142.50 L178.8 142.33Z" fill="rgba(156,198,255,.16)" stroke="#9cc6ff"/>
+              <path d="M103.0 139.95 L105.0 139.90 L107.0 139.83 L109.0 139.73 L111.0 139.59 L113.0 139.40 L115.0 139.14 L117.0 138.81 L119.0 138.37 L121.0 137.81 L123.0 137.10 L125.0 136.21 L127.0 135.12 L129.0 133.77 L131.0 132.15 L133.0 130.22 L135.0 127.95 L137.0 125.30 L139.0 122.27 L141.0 118.83 L143.0 114.98 L145.0 110.75 L147.0 106.14 L149.0 101.21 L151.0 96.01 L153.0 90.62 L155.0 85.13 L157.0 79.65 L159.0 74.29 L161.0 69.18 L163.0 64.45 L165.0 60.21 L167.0 56.58 L169.0 53.68 L171.0 51.58 L173.0 50.35 L175.0 50.04 L177.0 50.65 L179.0 52.17 L181.0 54.56 L183.0 57.76 L185.0 61.68 L187.0 66.22 L189.0 71.25 L191.0 76.65 L193.0 82.31 L195.0 88.08 L197.0 93.86 L199.0 99.54 L201.0 105.03 L203.0 110.24 L205.0 115.13 L207.0 119.65 L209.0 123.76 L211.0 127.47 L213.0 130.77 L215.0 133.67 L217.0 136.19 L219.0 138.36 L221.0 140.21 L223.0 141.77 L225.0 143.09 L227.0 144.18 L229.0 145.08 L231.0 145.83 L233.0 146.44 L235.0 146.94 L237.0 147.35 L239.0 147.69 L241.0 147.97 L243.0 148.21 L245.0 148.40 L247.0 148.57 L247.0 148.71 L245.0 148.60 L243.0 148.49 L241.0 148.37 L239.0 148.24 L237.0 148.11 L235.0 147.96 L233.0 147.81 L231.0 147.65 L229.0 147.49 L227.0 147.31 L225.0 147.13 L223.0 146.94 L221.0 146.74 L219.0 146.54 L217.0 146.33 L215.0 146.12 L213.0 145.90 L211.0 145.68 L209.0 145.45 L207.0 145.23 L205.0 145.00 L203.0 144.77 L201.0 144.55 L199.0 144.32 L197.0 144.10 L195.0 143.88 L193.0 143.67 L191.0 143.46 L189.0 143.26 L187.0 143.06 L185.0 142.87 L183.0 142.69 L181.0 142.51 L179.0 142.35 L177.0 142.19 L175.0 142.04 L173.0 141.89 L171.0 141.76 L169.0 141.63 L167.0 141.51 L165.0 141.40 L163.0 141.29 L161.0 141.19 L159.0 141.10 L157.0 141.01 L155.0 140.93 L153.0 140.86 L151.0 140.79 L149.0 140.73 L147.0 140.67 L145.0 140.61 L143.0 140.56 L141.0 140.52 L139.0 140.47 L137.0 140.43 L135.0 140.40 L133.0 140.37 L131.0 140.33 L129.0 140.31 L127.0 140.28 L125.0 140.26 L123.0 140.23 L121.0 140.21 L119.0 140.20 L117.0 140.18 L115.0 140.16 L113.0 140.15 L111.0 140.14 L109.0 140.13 L107.0 140.11 L105.0 140.11 L103.0 140.10Z" fill="rgba(255,106,61,.2)" stroke="#ff6a3d"/>
+              <path d="M20 140.00 L30 140.00 L40 140.01 L50 140.01 L60 140.01 L70 140.02 L80 140.03 L90 140.05 L100 140.08 L110 140.13 L120 140.21 L130 140.32 L140 140.50 L150 140.76 L160 141.15 L170 141.69 L180 142.43 L190 143.36 L200 144.43 L210 145.57 L220 146.64 L230 147.57 L240 148.31 L250 148.85 L260 149.24 L270 149.50 L280 149.68 L290 149.79 L300 149.87 L310 149.92 L320 149.95 L330 149.97 L340 149.98 L350 149.99 L360 149.99 L370 149.99 L380 150.00 L380 150.00" fill="none" stroke="rgba(255,255,255,.35)" stroke-dasharray="3 4"/>
+            </g>
+            <g fill="rgba(255,255,255,.5)"><circle cx="24" cy="139.2" r="1.3"/><circle cx="31" cy="138.5" r="1.3"/><circle cx="38" cy="140.7" r="1.3"/><circle cx="45" cy="138.1" r="1.3"/><circle cx="52" cy="140.1" r="1.3"/><circle cx="59" cy="139.3" r="1.3"/><circle cx="66" cy="137.8" r="1.3"/><circle cx="73" cy="139.4" r="1.3"/><circle cx="80" cy="136.3" r="1.3"/><circle cx="87" cy="136.1" r="1.3"/><circle cx="94" cy="131.6" r="1.3"/><circle cx="101" cy="127.9" r="1.3"/><circle cx="108" cy="125.7" r="1.3"/><circle cx="115" cy="124.8" r="1.3"/><circle cx="122" cy="120.2" r="1.3"/><circle cx="129" cy="119.3" r="1.3"/><circle cx="136" cy="117.5" r="1.3"/><circle cx="143" cy="110.9" r="1.3"/><circle cx="150" cy="95.7" r="1.3"/><circle cx="157" cy="77.7" r="1.3"/><circle cx="164" cy="63.7" r="1.3"/><circle cx="171" cy="49.4" r="1.3"/><circle cx="178" cy="52.7" r="1.3"/><circle cx="185" cy="60.5" r="1.3"/><circle cx="192" cy="77.0" r="1.3"/><circle cx="199" cy="95.2" r="1.3"/><circle cx="206" cy="110.1" r="1.3"/><circle cx="213" cy="118.6" r="1.3"/><circle cx="220" cy="113.9" r="1.3"/><circle cx="227" cy="108.7" r="1.3"/><circle cx="234" cy="102.2" r="1.3"/><circle cx="241" cy="99.5" r="1.3"/><circle cx="248" cy="105.9" r="1.3"/><circle cx="255" cy="114.6" r="1.3"/><circle cx="262" cy="126.6" r="1.3"/><circle cx="269" cy="137.0" r="1.3"/><circle cx="276" cy="145.3" r="1.3"/><circle cx="283" cy="147.4" r="1.3"/><circle cx="290" cy="148.3" r="1.3"/><circle cx="297" cy="150.1" r="1.3"/><circle cx="304" cy="149.6" r="1.3"/><circle cx="311" cy="149.0" r="1.3"/><circle cx="318" cy="151.2" r="1.3"/><circle cx="325" cy="150.8" r="1.3"/><circle cx="332" cy="148.8" r="1.3"/><circle cx="339" cy="150.3" r="1.3"/><circle cx="346" cy="150.1" r="1.3"/><circle cx="353" cy="151.6" r="1.3"/><circle cx="360" cy="151.0" r="1.3"/><circle cx="367" cy="149.1" r="1.3"/><circle cx="374" cy="152.1" r="1.3"/></g>
+            <path class="draw" pathLength="1" d="M20 140.00 L22 140.00 L24 140.00 L26 140.00 L28 140.00 L30 140.00 L32 140.00 L34 140.00 L36 140.00 L38 140.00 L40 140.00 L42 140.00 L44 140.00 L46 140.00 L48 140.00 L50 140.00 L52 139.99 L54 139.98 L56 139.97 L58 139.95 L60 139.92 L62 139.89 L64 139.84 L66 139.77 L68 139.68 L70 139.56 L72 139.41 L74 139.22 L76 138.98 L78 138.68 L80 138.31 L82 137.87 L84 137.35 L86 136.75 L88 136.05 L90 135.27 L92 134.40 L94 133.46 L96 132.45 L98 131.39 L100 130.30 L102 129.20 L104 128.11 L106 127.06 L108 126.07 L110 125.17 L112 124.36 L114 123.67 L116 123.08 L118 122.60 L120 122.21 L122 121.87 L124 121.55 L126 121.20 L128 120.77 L130 120.19 L132 119.41 L134 118.35 L136 116.97 L138 115.20 L140 113.02 L142 110.38 L144 107.28 L146 103.71 L148 99.72 L150 95.34 L152 90.65 L154 85.72 L156 80.66 L158 75.60 L160 70.65 L162 65.95 L164 61.64 L166 57.85 L168 54.69 L170 52.27 L172 50.66 L174 49.93 L176 50.10 L178 51.17 L180 53.12 L182 55.90 L184 59.41 L186 63.56 L188 68.22 L190 73.27 L192 78.56 L194 83.95 L196 89.29 L198 94.45 L200 99.30 L202 103.73 L204 107.63 L206 110.94 L208 113.59 L210 115.55 L212 116.81 L214 117.36 L216 117.25 L218 116.54 L220 115.30 L222 113.62 L224 111.64 L226 109.46 L228 107.24 L230 105.10 L232 103.18 L234 101.60 L236 100.47 L238 99.86 L240 99.84 L242 100.43 L244 101.62 L246 103.39 L248 105.67 L250 108.40 L252 111.47 L254 114.79 L256 118.25 L258 121.76 L260 125.20 L262 128.52 L264 131.64 L266 134.50 L268 137.09 L270 139.39 L272 141.38 L274 143.09 L276 144.52 L278 145.70 L280 146.67 L282 147.44 L284 148.05 L286 148.52 L288 148.88 L290 149.16 L292 149.37 L294 149.52 L296 149.63 L298 149.71 L300 149.77 L302 149.82 L304 149.85 L306 149.87 L308 149.89 L310 149.91 L312 149.92 L314 149.93 L316 149.93 L318 149.94 L320 149.95 L322 149.95 L324 149.96 L326 149.96 L328 149.96 L330 149.97 L332 149.97 L334 149.97 L336 149.97 L338 149.98 L340 149.98 L342 149.98 L344 149.98 L346 149.98 L348 149.98 L350 149.99 L352 149.99 L354 149.99 L356 149.99 L358 149.99 L360 149.99 L362 149.99 L364 149.99 L366 149.99 L368 149.99 L370 149.99 L372 149.99 L374 150.00 L376 150.00 L378 150.00 L380 150.00" fill="none" stroke="#fff" stroke-width="1.6"/>
+            <text x="20" y="184" font-family="DM Mono, monospace" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,.45)">← BINDING ENERGY (eV)</text>
+          </svg>
+        </div>
+        <div class="project-body">
+          <p class="kicker mono">Python · Flet · AGPL-3.0</p>
+          <h3>OpenXPSAnalyzer</h3>
+          <p data-i18n="pj1.desc">Cross-platform app for post-processing XPS data exported from Avantage. Runs on the web, macOS and Windows.</p>
+          <ul class="checks">
+            <li data-i18n="pj1.c1">Batch import of Avantage Excel exports; each project saved as one NetCDF-4 file</li>
+            <li data-i18n="pj1.c2">Peak position, height and area; RMSE, MAE and R²</li>
+            <li data-i18n="pj1.c3">Hover charts and multi-panel figures; export at 600 dpi or as interactive HTML</li>
+          </ul>
+          <div class="tags"><span class="tag">Flet</span><span class="tag">xarray</span><span class="tag">Matplotlib</span><span class="tag">Plotly</span><span class="tag">pytest · CI</span></div>
+          <div class="term">
+            <div class="term-head mono"><span data-i18n="pj.quick">Quick start</span><button class="term-copy mono" type="button" data-copy="git clone https://github.com/AkiyamaSuguru/OpenXPSAnalyzer&#10;cd OpenXPSAnalyzer&#10;uv sync&#10;uv run flet run"><span data-i18n="ct.copy">Copy</span></button></div>
+            <pre tabindex="0"><code><span class="pr">$ </span>git clone https://github.com/AkiyamaSuguru/OpenXPSAnalyzer
+<span class="pr">$ </span>cd OpenXPSAnalyzer &amp;&amp; uv sync
+<span class="pr">$ </span>uv run flet run  <span class="cm" data-i18n="pj1.cm"># add --web to run in the browser</span></code></pre>
+          </div>
+          <p class="commit mono" data-commit></p>
+          <a class="link-arrow mono" href="https://github.com/AkiyamaSuguru/OpenXPSAnalyzer" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="project hud reveal" data-repo="AkiyamaSuguru/opengma">
+        <div class="win-bar mono"><i></i><i></i><i></i><span>~/opengma</span><span class="repo-meta" data-repo-meta></span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 400 200">
+            <text x="24" y="28" font-family="DM Mono, monospace" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,.45)">READ → STANDARDIZE → USE</text>
+            <g fill="none" stroke="rgba(255,255,255,.65)" stroke-width="1.2">
+              <path d="M44 42h18l8 8v24H44z"/><path d="M62 42v8h8"/>
+              <path d="M44 88h18l8 8v24H44z"/><path d="M62 88v8h8"/>
+              <path d="M44 134h18l8 8v24H44z"/><path d="M62 134v8h8"/>
+            </g>
+            <g stroke="rgba(255,255,255,.3)"><path d="M49 58h14M49 63h10M49 104h14M49 109h10M49 150h14M49 155h10"/></g>
+            <g fill="none" stroke="#9cc6ff" stroke-width="1.2" class="flow">
+              <path d="M76 58C122 58 130 100 172 100"/>
+              <path d="M76 104L172 100"/>
+              <path d="M76 150C122 150 130 100 172 100"/>
+            </g>
+            <path d="M228 100L214 124.2L186 124.2L172 100L186 75.8L214 75.8Z" fill="rgba(255,255,255,.05)" stroke="#fff" stroke-width="1.4"/>
+            <text x="200" y="104" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" letter-spacing="2" fill="#fff">GMA</text>
+            <g fill="none" stroke="#ff6a3d" stroke-width="1.2" class="flow">
+              <path d="M228 100C262 100 258 38 290 38"/>
+              <path d="M228 100C262 100 262 78 290 78"/>
+              <path d="M228 100C262 100 262 122 290 122"/>
+              <path d="M228 100C262 100 258 162 290 162"/>
+            </g>
+            <g fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.55)">
+              <rect x="290" y="26" width="90" height="24" rx="12"/><rect x="290" y="66" width="90" height="24" rx="12"/>
+              <rect x="290" y="110" width="90" height="24" rx="12"/><rect x="290" y="150" width="90" height="24" rx="12"/>
+            </g>
+            <g font-family="DM Mono, monospace" font-size="9.5" letter-spacing="1.5" fill="#f4f6f9" text-anchor="middle">
+              <text x="335" y="41.5">ANALYZE</text><text x="335" y="81.5">PLOT</text><text x="335" y="125.5">COMPUTE</text><text x="335" y="165.5">STORE</text>
+            </g>
+          </svg>
+        </div>
+        <div class="project-body">
+          <p class="kicker mono" data-i18n="pj2.kicker">Python · In development</p>
+          <h3>OpenGMA</h3>
+          <p data-i18n="pj2.desc">Open General Material Analyzer: a modular toolkit that converts characterization data from different formats into one standard structure for analysis, plotting, calculation and storage.</p>
+          <ul class="checks">
+            <li data-i18n="pj2.c1">Readers that convert input formats to a standard data structure</li>
+            <li data-i18n="pj2.c2">Analysis modules for common characterization methods</li>
+            <li data-i18n="pj2.c3">Publication-style and interactive figures</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">uv</span><span class="tag">Jupyter</span></div>
+          <div class="term">
+            <div class="term-head mono"><span data-i18n="pj.quick">Quick start</span><button class="term-copy mono" type="button" data-copy="git clone https://github.com/AkiyamaSuguru/opengma"><span data-i18n="ct.copy">Copy</span></button></div>
+            <pre tabindex="0"><code><span class="pr">$ </span>git clone https://github.com/AkiyamaSuguru/opengma
+<span class="cm" data-i18n="pj2.cm"># in development: the API may still change</span></code></pre>
+          </div>
+          <p class="commit mono" data-commit></p>
+          <a class="link-arrow mono" href="https://github.com/AkiyamaSuguru/opengma" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -141,10 +232,10 @@
 <!-- ================= RESEARCH ================= -->
 <section class="section" id="research">
   <div class="wrap">
-    <p class="eyebrow mono reveal">02</p>
-    <h2 class="title reveal" data-i18n="nav.research">Research</h2>
+    <p class="eyebrow mono reveal"><b>02</b><span>~/research</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="nav.research">Research</h2>
 
-    <article class="mission reveal" id="thesis">
+    <article class="mission hud reveal" id="thesis">
       <header class="mission-head">
         <div>
           <p class="kicker mono" data-i18n="rs.kicker">M.S. thesis · Jul 2025 — Present</p>
@@ -246,8 +337,8 @@
 <!-- ================= PUBLICATIONS ================= -->
 <section class="section" id="publications">
   <div class="wrap">
-    <p class="eyebrow mono reveal">03</p>
-    <h2 class="title reveal" data-i18n="nav.publications">Publications</h2>
+    <p class="eyebrow mono reveal"><b>03</b><span>~/publications</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="nav.publications">Publications</h2>
     <article class="paper reveal">
       <div class="paper-year" aria-hidden="true">2026</div>
       <div>
@@ -274,92 +365,26 @@
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
-<section class="section" id="projects">
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
   <div class="wrap">
-    <p class="eyebrow mono reveal">04</p>
-    <h2 class="title reveal" data-i18n="nav.projects">Projects</h2>
-    <div class="projects">
-
-      <article class="project reveal" data-repo="AkiyamaSuguru/OpenXPSAnalyzer">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 400 200">
-            <g stroke="rgba(255,255,255,.06)">
-              <path d="M20 40H380M20 80H380M20 120H380"/>
-              <path d="M60 24V160M100 24V160M140 24V160M180 24V160M220 24V160M260 24V160M300 24V160M340 24V160"/>
-            </g>
-            <path d="M20 160H380" stroke="rgba(255,255,255,.3)"/>
-            <g class="fade">
-              <path d="M53.2 139.99 L55.2 139.97 L57.2 139.96 L59.3 139.94 L61.3 139.90 L63.3 139.86 L65.4 139.80 L67.4 139.71 L69.4 139.60 L71.4 139.46 L73.5 139.28 L75.5 139.05 L77.5 138.76 L79.5 138.40 L81.6 137.98 L83.6 137.47 L85.6 136.88 L87.6 136.20 L89.7 135.42 L91.7 134.57 L93.7 133.63 L95.7 132.63 L97.8 131.58 L99.8 130.50 L101.8 129.42 L103.8 128.37 L105.9 127.37 L107.9 126.46 L109.9 125.67 L111.9 125.03 L114.0 124.56 L116.0 124.27 L118.0 124.19 L120.0 124.31 L122.1 124.63 L124.1 125.13 L126.1 125.81 L128.1 126.64 L130.2 127.58 L132.2 128.62 L134.2 129.71 L136.2 130.84 L138.2 131.96 L140.3 133.06 L142.3 134.11 L144.3 135.11 L146.4 136.02 L148.4 136.86 L150.4 137.61 L152.4 138.27 L154.5 138.85 L156.5 139.36 L158.5 139.80 L160.5 140.19 L162.6 140.52 L164.6 140.81 L166.6 141.07 L168.6 141.30 L170.7 141.51 L172.7 141.71 L174.7 141.90 L176.7 142.09 L178.8 142.27 L180.8 142.46 L182.8 142.65 L182.8 142.67 L180.8 142.50 L178.8 142.33 L176.7 142.17 L174.7 142.01 L172.7 141.87 L170.7 141.73 L168.6 141.61 L166.6 141.49 L164.6 141.37 L162.6 141.27 L160.5 141.17 L158.5 141.08 L156.5 140.99 L154.5 140.91 L152.4 140.84 L150.4 140.77 L148.4 140.71 L146.4 140.65 L144.3 140.60 L142.3 140.55 L140.3 140.50 L138.2 140.46 L136.2 140.42 L134.2 140.38 L132.2 140.35 L130.2 140.32 L128.1 140.29 L126.1 140.27 L124.1 140.25 L122.1 140.23 L120.0 140.21 L118.0 140.19 L116.0 140.17 L114.0 140.16 L111.9 140.14 L109.9 140.13 L107.9 140.12 L105.9 140.11 L103.8 140.10 L101.8 140.09 L99.8 140.08 L97.8 140.08 L95.7 140.07 L93.7 140.06 L91.7 140.06 L89.7 140.05 L87.6 140.05 L85.6 140.04 L83.6 140.04 L81.6 140.04 L79.5 140.03 L77.5 140.03 L75.5 140.03 L73.5 140.03 L71.4 140.02 L69.4 140.02 L67.4 140.02 L65.4 140.02 L63.3 140.02 L61.3 140.01 L59.3 140.01 L57.2 140.01 L55.2 140.01 L53.2 140.01Z" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.45)"/>
-              <path d="M178.8 142.26 L180.8 142.39 L182.8 142.51 L184.8 142.61 L186.8 142.68 L188.8 142.72 L190.8 142.71 L192.8 142.63 L194.9 142.46 L196.9 142.17 L198.9 141.74 L200.9 141.14 L202.9 140.33 L204.9 139.30 L206.9 138.01 L208.9 136.44 L210.9 134.57 L212.9 132.40 L214.9 129.94 L216.9 127.22 L218.9 124.26 L220.9 121.14 L222.9 117.92 L225.0 114.68 L227.0 111.54 L229.0 108.60 L231.0 105.97 L233.0 103.74 L235.0 102.01 L237.0 100.85 L239.0 100.33 L241.0 100.45 L243.0 101.24 L245.0 102.65 L247.0 104.64 L249.0 107.12 L251.0 110.02 L253.0 113.23 L255.0 116.63 L257.1 120.12 L259.1 123.61 L261.1 127.01 L263.1 130.23 L265.1 133.22 L267.1 135.95 L269.1 138.39 L271.1 140.52 L273.1 142.36 L275.1 143.92 L277.1 145.21 L279.1 146.27 L281.1 147.13 L283.1 147.80 L285.1 148.33 L287.2 148.74 L289.2 149.05 L291.2 149.29 L293.2 149.46 L295.2 149.59 L297.2 149.68 L299.2 149.75 L301.2 149.80 L301.2 149.88 L299.2 149.86 L297.2 149.85 L295.2 149.84 L293.2 149.82 L291.2 149.80 L289.2 149.79 L287.2 149.77 L285.1 149.74 L283.1 149.72 L281.1 149.70 L279.1 149.67 L277.1 149.64 L275.1 149.60 L273.1 149.57 L271.1 149.53 L269.1 149.49 L267.1 149.44 L265.1 149.39 L263.1 149.33 L261.1 149.27 L259.1 149.21 L257.1 149.14 L255.0 149.07 L253.0 148.99 L251.0 148.90 L249.0 148.81 L247.0 148.71 L245.0 148.60 L243.0 148.49 L241.0 148.37 L239.0 148.24 L237.0 148.11 L235.0 147.96 L233.0 147.81 L231.0 147.65 L229.0 147.48 L227.0 147.31 L225.0 147.12 L222.9 146.93 L220.9 146.74 L218.9 146.53 L216.9 146.32 L214.9 146.11 L212.9 145.89 L210.9 145.67 L208.9 145.44 L206.9 145.21 L204.9 144.99 L202.9 144.76 L200.9 144.53 L198.9 144.31 L196.9 144.09 L194.9 143.87 L192.8 143.65 L190.8 143.44 L188.8 143.24 L186.8 143.04 L184.8 142.86 L182.8 142.67 L180.8 142.50 L178.8 142.33Z" fill="rgba(156,198,255,.16)" stroke="#9cc6ff"/>
-              <path d="M103.0 139.95 L105.0 139.90 L107.0 139.83 L109.0 139.73 L111.0 139.59 L113.0 139.40 L115.0 139.14 L117.0 138.81 L119.0 138.37 L121.0 137.81 L123.0 137.10 L125.0 136.21 L127.0 135.12 L129.0 133.77 L131.0 132.15 L133.0 130.22 L135.0 127.95 L137.0 125.30 L139.0 122.27 L141.0 118.83 L143.0 114.98 L145.0 110.75 L147.0 106.14 L149.0 101.21 L151.0 96.01 L153.0 90.62 L155.0 85.13 L157.0 79.65 L159.0 74.29 L161.0 69.18 L163.0 64.45 L165.0 60.21 L167.0 56.58 L169.0 53.68 L171.0 51.58 L173.0 50.35 L175.0 50.04 L177.0 50.65 L179.0 52.17 L181.0 54.56 L183.0 57.76 L185.0 61.68 L187.0 66.22 L189.0 71.25 L191.0 76.65 L193.0 82.31 L195.0 88.08 L197.0 93.86 L199.0 99.54 L201.0 105.03 L203.0 110.24 L205.0 115.13 L207.0 119.65 L209.0 123.76 L211.0 127.47 L213.0 130.77 L215.0 133.67 L217.0 136.19 L219.0 138.36 L221.0 140.21 L223.0 141.77 L225.0 143.09 L227.0 144.18 L229.0 145.08 L231.0 145.83 L233.0 146.44 L235.0 146.94 L237.0 147.35 L239.0 147.69 L241.0 147.97 L243.0 148.21 L245.0 148.40 L247.0 148.57 L247.0 148.71 L245.0 148.60 L243.0 148.49 L241.0 148.37 L239.0 148.24 L237.0 148.11 L235.0 147.96 L233.0 147.81 L231.0 147.65 L229.0 147.49 L227.0 147.31 L225.0 147.13 L223.0 146.94 L221.0 146.74 L219.0 146.54 L217.0 146.33 L215.0 146.12 L213.0 145.90 L211.0 145.68 L209.0 145.45 L207.0 145.23 L205.0 145.00 L203.0 144.77 L201.0 144.55 L199.0 144.32 L197.0 144.10 L195.0 143.88 L193.0 143.67 L191.0 143.46 L189.0 143.26 L187.0 143.06 L185.0 142.87 L183.0 142.69 L181.0 142.51 L179.0 142.35 L177.0 142.19 L175.0 142.04 L173.0 141.89 L171.0 141.76 L169.0 141.63 L167.0 141.51 L165.0 141.40 L163.0 141.29 L161.0 141.19 L159.0 141.10 L157.0 141.01 L155.0 140.93 L153.0 140.86 L151.0 140.79 L149.0 140.73 L147.0 140.67 L145.0 140.61 L143.0 140.56 L141.0 140.52 L139.0 140.47 L137.0 140.43 L135.0 140.40 L133.0 140.37 L131.0 140.33 L129.0 140.31 L127.0 140.28 L125.0 140.26 L123.0 140.23 L121.0 140.21 L119.0 140.20 L117.0 140.18 L115.0 140.16 L113.0 140.15 L111.0 140.14 L109.0 140.13 L107.0 140.11 L105.0 140.11 L103.0 140.10Z" fill="rgba(255,106,61,.2)" stroke="#ff6a3d"/>
-              <path d="M20 140.00 L30 140.00 L40 140.01 L50 140.01 L60 140.01 L70 140.02 L80 140.03 L90 140.05 L100 140.08 L110 140.13 L120 140.21 L130 140.32 L140 140.50 L150 140.76 L160 141.15 L170 141.69 L180 142.43 L190 143.36 L200 144.43 L210 145.57 L220 146.64 L230 147.57 L240 148.31 L250 148.85 L260 149.24 L270 149.50 L280 149.68 L290 149.79 L300 149.87 L310 149.92 L320 149.95 L330 149.97 L340 149.98 L350 149.99 L360 149.99 L370 149.99 L380 150.00 L380 150.00" fill="none" stroke="rgba(255,255,255,.35)" stroke-dasharray="3 4"/>
-            </g>
-            <g fill="rgba(255,255,255,.5)"><circle cx="24" cy="139.2" r="1.3"/><circle cx="31" cy="138.5" r="1.3"/><circle cx="38" cy="140.7" r="1.3"/><circle cx="45" cy="138.1" r="1.3"/><circle cx="52" cy="140.1" r="1.3"/><circle cx="59" cy="139.3" r="1.3"/><circle cx="66" cy="137.8" r="1.3"/><circle cx="73" cy="139.4" r="1.3"/><circle cx="80" cy="136.3" r="1.3"/><circle cx="87" cy="136.1" r="1.3"/><circle cx="94" cy="131.6" r="1.3"/><circle cx="101" cy="127.9" r="1.3"/><circle cx="108" cy="125.7" r="1.3"/><circle cx="115" cy="124.8" r="1.3"/><circle cx="122" cy="120.2" r="1.3"/><circle cx="129" cy="119.3" r="1.3"/><circle cx="136" cy="117.5" r="1.3"/><circle cx="143" cy="110.9" r="1.3"/><circle cx="150" cy="95.7" r="1.3"/><circle cx="157" cy="77.7" r="1.3"/><circle cx="164" cy="63.7" r="1.3"/><circle cx="171" cy="49.4" r="1.3"/><circle cx="178" cy="52.7" r="1.3"/><circle cx="185" cy="60.5" r="1.3"/><circle cx="192" cy="77.0" r="1.3"/><circle cx="199" cy="95.2" r="1.3"/><circle cx="206" cy="110.1" r="1.3"/><circle cx="213" cy="118.6" r="1.3"/><circle cx="220" cy="113.9" r="1.3"/><circle cx="227" cy="108.7" r="1.3"/><circle cx="234" cy="102.2" r="1.3"/><circle cx="241" cy="99.5" r="1.3"/><circle cx="248" cy="105.9" r="1.3"/><circle cx="255" cy="114.6" r="1.3"/><circle cx="262" cy="126.6" r="1.3"/><circle cx="269" cy="137.0" r="1.3"/><circle cx="276" cy="145.3" r="1.3"/><circle cx="283" cy="147.4" r="1.3"/><circle cx="290" cy="148.3" r="1.3"/><circle cx="297" cy="150.1" r="1.3"/><circle cx="304" cy="149.6" r="1.3"/><circle cx="311" cy="149.0" r="1.3"/><circle cx="318" cy="151.2" r="1.3"/><circle cx="325" cy="150.8" r="1.3"/><circle cx="332" cy="148.8" r="1.3"/><circle cx="339" cy="150.3" r="1.3"/><circle cx="346" cy="150.1" r="1.3"/><circle cx="353" cy="151.6" r="1.3"/><circle cx="360" cy="151.0" r="1.3"/><circle cx="367" cy="149.1" r="1.3"/><circle cx="374" cy="152.1" r="1.3"/></g>
-            <path class="draw" pathLength="1" d="M20 140.00 L22 140.00 L24 140.00 L26 140.00 L28 140.00 L30 140.00 L32 140.00 L34 140.00 L36 140.00 L38 140.00 L40 140.00 L42 140.00 L44 140.00 L46 140.00 L48 140.00 L50 140.00 L52 139.99 L54 139.98 L56 139.97 L58 139.95 L60 139.92 L62 139.89 L64 139.84 L66 139.77 L68 139.68 L70 139.56 L72 139.41 L74 139.22 L76 138.98 L78 138.68 L80 138.31 L82 137.87 L84 137.35 L86 136.75 L88 136.05 L90 135.27 L92 134.40 L94 133.46 L96 132.45 L98 131.39 L100 130.30 L102 129.20 L104 128.11 L106 127.06 L108 126.07 L110 125.17 L112 124.36 L114 123.67 L116 123.08 L118 122.60 L120 122.21 L122 121.87 L124 121.55 L126 121.20 L128 120.77 L130 120.19 L132 119.41 L134 118.35 L136 116.97 L138 115.20 L140 113.02 L142 110.38 L144 107.28 L146 103.71 L148 99.72 L150 95.34 L152 90.65 L154 85.72 L156 80.66 L158 75.60 L160 70.65 L162 65.95 L164 61.64 L166 57.85 L168 54.69 L170 52.27 L172 50.66 L174 49.93 L176 50.10 L178 51.17 L180 53.12 L182 55.90 L184 59.41 L186 63.56 L188 68.22 L190 73.27 L192 78.56 L194 83.95 L196 89.29 L198 94.45 L200 99.30 L202 103.73 L204 107.63 L206 110.94 L208 113.59 L210 115.55 L212 116.81 L214 117.36 L216 117.25 L218 116.54 L220 115.30 L222 113.62 L224 111.64 L226 109.46 L228 107.24 L230 105.10 L232 103.18 L234 101.60 L236 100.47 L238 99.86 L240 99.84 L242 100.43 L244 101.62 L246 103.39 L248 105.67 L250 108.40 L252 111.47 L254 114.79 L256 118.25 L258 121.76 L260 125.20 L262 128.52 L264 131.64 L266 134.50 L268 137.09 L270 139.39 L272 141.38 L274 143.09 L276 144.52 L278 145.70 L280 146.67 L282 147.44 L284 148.05 L286 148.52 L288 148.88 L290 149.16 L292 149.37 L294 149.52 L296 149.63 L298 149.71 L300 149.77 L302 149.82 L304 149.85 L306 149.87 L308 149.89 L310 149.91 L312 149.92 L314 149.93 L316 149.93 L318 149.94 L320 149.95 L322 149.95 L324 149.96 L326 149.96 L328 149.96 L330 149.97 L332 149.97 L334 149.97 L336 149.97 L338 149.98 L340 149.98 L342 149.98 L344 149.98 L346 149.98 L348 149.98 L350 149.99 L352 149.99 L354 149.99 L356 149.99 L358 149.99 L360 149.99 L362 149.99 L364 149.99 L366 149.99 L368 149.99 L370 149.99 L372 149.99 L374 150.00 L376 150.00 L378 150.00 L380 150.00" fill="none" stroke="#fff" stroke-width="1.6"/>
-            <text x="20" y="184" font-family="DM Mono, monospace" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,.45)">← BINDING ENERGY (eV)</text>
-          </svg>
-        </div>
-        <div class="project-body">
-          <p class="kicker mono"><span>Python · AGPL-3.0</span><span class="repo-meta" data-repo-meta></span></p>
-          <h3>OpenXPSAnalyzer</h3>
-          <p data-i18n="pj1.desc">Cross-platform application for post-processing XPS data exported from Avantage: batch import, fitted-peak visualization, peak metrics and figure export.</p>
-          <ul class="checks">
-            <li data-i18n="pj1.c1">Batch import from folders; projects stored as NetCDF-4</li>
-            <li data-i18n="pj1.c2">Peak position, height and area; RMSE, MAE and R²</li>
-            <li data-i18n="pj1.c3">Multi-panel figures; 600-dpi PNG, SVG, PDF and HTML export</li>
-          </ul>
-          <div class="tags"><span class="tag">Flet</span><span class="tag">xarray</span><span class="tag">Matplotlib</span><span class="tag">Plotly</span><span class="tag">pytest · CI</span></div>
-          <a class="link-arrow mono" href="https://github.com/AkiyamaSuguru/OpenXPSAnalyzer" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-
-      <article class="project reveal" data-repo="AkiyamaSuguru/opengma">
-        <div class="viz" aria-hidden="true">
-          <svg viewBox="0 0 400 200">
-            <text x="24" y="28" font-family="DM Mono, monospace" font-size="9" letter-spacing="1.5" fill="rgba(255,255,255,.45)">READ → STANDARDIZE → USE</text>
-            <g fill="none" stroke="rgba(255,255,255,.65)" stroke-width="1.2">
-              <path d="M44 42h18l8 8v24H44z"/><path d="M62 42v8h8"/>
-              <path d="M44 88h18l8 8v24H44z"/><path d="M62 88v8h8"/>
-              <path d="M44 134h18l8 8v24H44z"/><path d="M62 134v8h8"/>
-            </g>
-            <g stroke="rgba(255,255,255,.3)"><path d="M49 58h14M49 63h10M49 104h14M49 109h10M49 150h14M49 155h10"/></g>
-            <g fill="none" stroke="#9cc6ff" stroke-width="1.2" class="flow">
-              <path d="M76 58C122 58 130 100 172 100"/>
-              <path d="M76 104L172 100"/>
-              <path d="M76 150C122 150 130 100 172 100"/>
-            </g>
-            <path d="M228 100L214 124.2L186 124.2L172 100L186 75.8L214 75.8Z" fill="rgba(255,255,255,.05)" stroke="#fff" stroke-width="1.4"/>
-            <text x="200" y="104" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" letter-spacing="2" fill="#fff">GMA</text>
-            <g fill="none" stroke="#ff6a3d" stroke-width="1.2" class="flow">
-              <path d="M228 100C262 100 258 38 290 38"/>
-              <path d="M228 100C262 100 262 78 290 78"/>
-              <path d="M228 100C262 100 262 122 290 122"/>
-              <path d="M228 100C262 100 258 162 290 162"/>
-            </g>
-            <g fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.55)">
-              <rect x="290" y="26" width="90" height="24" rx="12"/><rect x="290" y="66" width="90" height="24" rx="12"/>
-              <rect x="290" y="110" width="90" height="24" rx="12"/><rect x="290" y="150" width="90" height="24" rx="12"/>
-            </g>
-            <g font-family="DM Mono, monospace" font-size="9.5" letter-spacing="1.5" fill="#f4f6f9" text-anchor="middle">
-              <text x="335" y="41.5">ANALYZE</text><text x="335" y="81.5">PLOT</text><text x="335" y="125.5">COMPUTE</text><text x="335" y="165.5">STORE</text>
-            </g>
-          </svg>
-        </div>
-        <div class="project-body">
-          <p class="kicker mono"><span data-i18n="pj2.kicker">Python · In development</span><span class="repo-meta" data-repo-meta></span></p>
-          <h3>OpenGMA</h3>
-          <p data-i18n="pj2.desc">Open General Material Analyzer: a modular toolkit that converts characterization data from different formats into one standard structure for analysis, plotting, calculation and storage.</p>
-          <ul class="checks">
-            <li data-i18n="pj2.c1">Readers that convert input formats to a standard data structure</li>
-            <li data-i18n="pj2.c2">Analysis modules for common characterization methods</li>
-            <li data-i18n="pj2.c3">Publication-style and interactive figures</li>
-          </ul>
-          <div class="tags"><span class="tag">Python</span><span class="tag">uv</span><span class="tag">Jupyter</span></div>
-          <a class="link-arrow mono" href="https://github.com/AkiyamaSuguru/opengma" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-
+    <p class="eyebrow mono reveal"><b>04</b><span>~/about</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="nav.about">About</h2>
+    <div class="about">
+      <div class="prose reveal">
+        <p data-i18n="about.p1">I am a master's student in Condensed Matter Physics in a joint program between <strong>Shanghai University</strong> and the <strong>Shanghai Institute of Applied Physics (SINAP), Chinese Academy of Sciences</strong>, advised by Prof. Hefei Huang and Prof. Yibing Zhang.</p>
+        <p data-i18n="about.p2">My research concerns <strong>SiC coatings on nuclear graphite</strong> for molten salt reactors: how the deposition temperature affects their structure and stoichiometry, how they corrode in molten salt, and how they respond to ion irradiation.</p>
+        <p data-i18n="about.p3">I also develop open-source Python tools for processing materials characterization data.</p>
+      </div>
+      <dl class="spec reveal">
+        <div><dt data-i18n="about.k.name">Name</dt><dd>Jay Ma</dd></div>
+        <div><dt data-i18n="about.k.program">Program</dt><dd data-i18n="about.v.program">M.S., Condensed Matter Physics</dd></div>
+        <div><dt data-i18n="about.k.inst">Institutions</dt><dd data-i18n="about.v.inst">Shanghai University × SINAP, CAS</dd></div>
+        <div><dt data-i18n="about.k.adv">Advisors</dt><dd data-i18n="about.v.adv">Prof. Hefei Huang · Prof. Yibing Zhang</dd></div>
+        <div><dt data-i18n="about.k.research">Research</dt><dd data-i18n="about.v.research">SiC coatings · Molten salt corrosion · Ion irradiation</dd></div>
+        <div><dt data-i18n="about.k.loc">Location</dt><dd data-i18n="about.v.loc">Shanghai, China</dd></div>
+        <div><dt data-i18n="about.k.grad">Graduation</dt><dd data-i18n="about.v.grad">June 2027 (expected)</dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -367,8 +392,8 @@
 <!-- ================= TIMELINE ================= -->
 <section class="section" id="timeline">
   <div class="wrap">
-    <p class="eyebrow mono reveal">05</p>
-    <h2 class="title reveal" data-i18n="nav.timeline">Timeline</h2>
+    <p class="eyebrow mono reveal"><b>05</b><span>~/timeline</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="nav.timeline">Timeline</h2>
     <ol class="log" id="log">
       <li class="reveal">
         <div class="log-year">2026</div>
@@ -397,8 +422,8 @@
 <!-- ================= METHODS ================= -->
 <section class="section" id="methods">
   <div class="wrap">
-    <p class="eyebrow mono reveal">06</p>
-    <h2 class="title reveal" data-i18n="mt.title">Methods &amp; tools</h2>
+    <p class="eyebrow mono reveal"><b>06</b><span>~/methods</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="mt.title">Methods &amp; tools</h2>
     <div class="toolbox">
       <div class="reveal">
         <p class="kicker mono" data-i18n="mt.exp">Experimental</p>
@@ -431,8 +456,8 @@
 <section class="section contact" id="contact">
   <div class="ember" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow mono reveal">07</p>
-    <h2 class="title reveal" data-i18n="nav.contact">Contact</h2>
+    <p class="eyebrow mono reveal"><b>07</b><span>~/contact</span></p>
+    <h2 class="title reveal" data-fx="decode" data-i18n="nav.contact">Contact</h2>
     <p class="contact-lead reveal" data-i18n="ct.lead">Questions about SiC coatings, molten salt corrosion or the open-source tools are welcome.</p>
     <div class="mail-row reveal">
       <a class="mail" href="mailto:jaymamun@outlook.com">jaymamun@outlook.com</a>
@@ -450,6 +475,7 @@
 <footer>
   <div class="wrap foot mono">
     <span>© <span id="yr">2026</span> Jay Ma</span>
+    <button class="konami" type="button" data-warp title="Konami code: warp speed">↑↑↓↓←→←→BA</button>
     <nav aria-label="Footer">
       <a href="https://github.com/AkiyamaSuguru" target="_blank" rel="noopener">GitHub</a>
       <a href="https://orcid.org/0009-0003-9102-7830" target="_blank" rel="noopener">ORCID</a>
