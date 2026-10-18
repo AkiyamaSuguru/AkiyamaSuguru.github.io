@@ -30,7 +30,7 @@ export function cameoArt() {
 }
 
 /** back cover in gold: star border, wreath, the emblem as a maker's mark, the motto on an arc */
-export function backArt() {
+export function backArt(id = 'motto-arc') {
   let s = `<g fill="${GOLD}" stroke="${GOLD}">`;
   s += `<rect x="7" y="7" width="286" height="400" fill="none" stroke-width="1.8"/><rect x="21" y="21" width="258" height="372" fill="none" stroke-width=".6"/>`;
   s += `<rect x="14" y="14" width="272" height="386" fill="none" stroke-width="1"/>`;
@@ -40,8 +40,8 @@ export function backArt() {
   /* the motto, in two arcs under the wreath */
   [[86, 'LANGUAGE IS INFORMATION,'], [99, 'INFORMATION IS EVERYTHING']].forEach(([r, line], i) => {
     const x = f(r * Math.cos(Math.PI / 18)), y = f(196 + r * Math.sin(Math.PI / 18));
-    s += `<path id="motto-arc-${i}" d="M${f(150 - x)} ${y}A${r} ${r} 0 0 0 ${f(150 + +x)} ${y}" fill="none" stroke="none"/>` +
-         `<text font-family="Cinzel, serif" font-size="7.2" letter-spacing="1.25" stroke="none"><textPath href="#motto-arc-${i}" startOffset="50%" text-anchor="middle">${line}</textPath></text>`;
+    s += `<path id="${id}-${i}" d="M${f(150 - x)} ${y}A${r} ${r} 0 0 0 ${f(150 + +x)} ${y}" fill="none" stroke="none"/>` +
+         `<text font-family="Cinzel, serif" font-size="7.2" letter-spacing="1.25" stroke="none"><textPath href="#${id}-${i}" startOffset="50%" text-anchor="middle">${line}</textPath></text>`;
   });
   for (const [x, y, sx, sy] of [[0, 0, 1, 1], [300, 0, -1, 1], [0, 414, 1, -1], [300, 414, -1, -1]])
     s += `<g transform="translate(${x} ${y}) scale(${sx * .95} ${sy * .95})"><path d="M0 0H50C38 6 27 13 19 21C12 29 6 39 0 50Z" stroke="none"/>` +

@@ -56,6 +56,7 @@ const SOUNDS = {
     burst({t, dur: 1.4, type: 'lowpass', freq: 260, freqTo: 1300, q: .6, gain: .14, attack: .4});
     for (let i = 0; i < 8; i++) burst({t: t + .04 + i * .05 + Math.random() * .02, dur: .03, freq: 560 + Math.random() * 320, q: 10, gain: .05});
   },
+  land: t => { tone({t, f0: 150, f1: 72, dur: .2, gain: .2}); burst({t, dur: .1, type: 'lowpass', freq: 700, q: .7, gain: .18}); },
   lift: t => burst({t, dur: 1.1, type: 'lowpass', freq: 220, freqTo: 900, q: .5, gain: .1, attack: .45}),
   page: t => {
     const k = .85 + Math.random() * .3;   /* no two pages sound quite alike */
@@ -93,6 +94,8 @@ export const sound = {
     if (!enabled || !ctx || motion.skipping) return;
     try { SOUNDS[name](ctx.currentTime + .01); } catch {}
   },
+  /** the shared audio context, once a click has unlocked it (the music plays through it too) */
+  get context() { return ctx; },
   get on() { return enabled; },
   set on(v) {
     enabled = v;

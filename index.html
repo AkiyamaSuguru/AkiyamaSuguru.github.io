@@ -49,12 +49,16 @@
       <!-- ============ the case: two doors meeting at an astrolabe ============ -->
       <div class="case" id="case">
         <div class="case-back"></div>
+        <div class="case-back-out"><svg viewBox="0 0 300 414" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-art="caseback"></svg></div>
         <div class="case-glow"></div>
         <div class="wall top-in"></div>
         <div class="wall top-out"></div>
         <div class="wall bottom-in"></div>
+        <div class="wall bottom-out"></div>
         <div class="wall left-in"></div>
+        <div class="wall left-out"></div>
         <div class="wall right-in"></div>
+        <div class="wall right-out"></div>
         <div class="door left" id="door-l">
           <div class="door-face door-front"><svg viewBox="0 0 300 800" preserveAspectRatio="none" aria-hidden="true"><use href="#art-case-front"/></svg></div>
           <div class="door-face door-inner"><svg viewBox="0 0 300 800" preserveAspectRatio="none" aria-hidden="true"><use href="#art-lining"/></svg></div>
@@ -591,7 +595,7 @@
 
 <div class="ui" id="ui">
   <noscript><p class="hint">This book opens with JavaScript. Please turn it on to read.</p></noscript>
-  <p class="hint" id="hint" data-i18n="case.hint">Turn the astrolabe's rule to open the case</p>
+  <p class="hint" id="hint"><span data-i18n="case.hint">Turn the astrolabe's rule to open the case</span><small data-i18n="case.drag">Drag to turn the case around</small></p>
   <button class="skip" id="skip" type="button" data-i18n="ui.skip">Skip</button>
   <button class="turn prev" id="prev" type="button" aria-label="Previous page" data-i18n-attr="aria-label:ui.prev">
     <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22"/><circle cx="24" cy="24" r="18.5" class="thin"/><path d="M27 15l-9 9 9 9"/></svg>
@@ -605,6 +609,9 @@
     </button>
     <button class="lang" type="button" data-lang-toggle aria-label="Switch to Chinese" title="Language (L)" data-i18n-attr="title:ui.langtip">
       <span class="lang-thumb" aria-hidden="true"></span><span class="lang-opt" data-opt="en">EN</span><span class="lang-opt" data-opt="zh">中</span>
+    </button>
+    <button class="tool" id="music" type="button" aria-pressed="true" aria-label="Music" data-i18n-attr="aria-label:ui.music">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17.5V6.2l10-2.2v11.3"/><circle cx="6.6" cy="17.6" r="2.4"/><circle cx="16.6" cy="15.4" r="2.4"/><path class="mute" d="M4 4l16 16"/></svg>
     </button>
     <button class="tool" id="sound" type="button" aria-pressed="true" aria-label="Sound" data-i18n-attr="aria-label:ui.sound" title="M">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="wave" d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/><path class="mute" d="M16 9l6 6M22 9l-6 6"/></svg>

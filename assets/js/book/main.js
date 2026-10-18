@@ -7,13 +7,14 @@ import {initScene} from './scene.js';
 import {createBook} from './book.js';
 import {createCase} from './casket.js';
 import {initPages} from './pages.js';
+import {createMusic} from './music.js';
 
 const still = matchMedia('(prefers-reduced-motion: reduce)').matches || new URLSearchParams(location.search).has('still');
 
 /* artwork, drawn once and shared by every element that asks for it */
 art.buildSprite();
 const ARTS = {
-  cover: art.coverArt, back: ill.backArt, frame: art.pageFrameArt, frontispiece: art.frontispieceArt,
+  cover: art.coverArt, back: () => ill.backArt(), caseback: () => ill.backArt('case-motto'), frame: art.pageFrameArt, frontispiece: art.frontispieceArt,
   exlibris: ill.exLibrisArt, cameo: ill.cameoArt, seal: art.chapterSealArt, initial: art.initialArt,
   spectrum: art.spectrumArt, xps: art.xpsPlateArt, gma: art.gmaPlateArt, latch: art.latchArt,
   xsec: ill.crossSectionArt, crystal: ill.crystalArt, map: ill.mapArt, envelope: ill.envelopeArt,
@@ -64,10 +65,16 @@ addEventListener('resize', () => {
   rt = setTimeout(() => { layout(); casket.relayout(); }, 120);
 });
 
+/* sound, and the music, which may play from the visitor's first click or key */
+const music = createMusic({sound});
+const firstTouch = () => { sound.unlock(); music.start(); };
+['click', 'keydown', 'touchend'].forEach(k => addEventListener(k, firstTouch, {once: true, capture: true}));
+
 /* toolbar */
-const soundBtn = document.getElementById('sound');
-const syncSound = () => soundBtn.setAttribute('aria-pressed', sound.on);
+const soundBtn = document.getElementById('sound'), musicBtn = document.getElementById('music');
+const syncSound = () => { soundBtn.setAttribute('aria-pressed', sound.on); musicBtn.setAttribute('aria-pressed', music.on); music.sync(); };
 soundBtn.addEventListener('click', () => { sound.on = !sound.on; sound.unlock(); syncSound(); });
+musicBtn.addEventListener('click', () => { music.on = !music.on; sound.unlock(); syncSound(); });
 document.getElementById('replay').addEventListener('click', replay);
 document.getElementById('contents-btn').addEventListener('click', () => book.go(book.posFor('contents'), {slug: 'contents'}));
 addEventListener('keydown', e => {

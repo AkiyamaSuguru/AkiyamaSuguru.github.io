@@ -8,6 +8,7 @@ export default {
   /* the case and the interface */
   'case.open': '打开书匣',
   'case.hint': '转动星盘上的指针，打开书匣',
+  'case.drag': '拖动可以转动书匣',
   'ui.skip': '跳过',
   'ui.prev': '上一页',
   'ui.next': '下一页',
@@ -242,4 +243,5 @@ export default {
   'js.toEn': '切换到英文',
   'js.toZh': '切换到中文',
   'ui.langtip': '切换语言 (L)',
+  'ui.music': '音乐',
 };

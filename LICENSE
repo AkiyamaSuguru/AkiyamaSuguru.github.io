@@ -21,8 +21,11 @@ NOT COVERED BY THIS LICENSE
    author's research, publications and letters.
    Copyright (C) 2026 Jay Ma. All rights reserved.
 
-If you reuse the code, replace the emblem, the icons and the personal content
-with your own.
+3. The background music, "A Memory Among the Stars", and its audio files
+   (assets/audio/). All rights reserved; it may not be reused.
+
+If you reuse the code, replace the emblem, the icons, the personal content and
+the music with your own.
 
 
 只开源代码部分
@@ -41,7 +44,10 @@ with your own.
 2. 书中的个人内容：关于作者及其研究、论文与书信的文字。
    版权所有 (C) 2026 Jay Ma，保留一切权利。
 
-复用代码时，请将徽标、图标与个人内容替换为你自己的。
+3. 背景音乐《A Memory Among the Stars》及其音频文件（assets/audio/）。
+   保留一切权利，不得复用。
+
+复用代码时，请将徽标、图标、个人内容与音乐替换为你自己的。
 
 
 ================================================================================

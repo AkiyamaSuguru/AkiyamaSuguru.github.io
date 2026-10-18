@@ -50,11 +50,22 @@ a{color:inherit}
              radial-gradient(34% 26% at 74% 64%,rgba(150,70,180,.15),transparent 70%),
              radial-gradient(46% 36% at 58% 26%,rgba(40,150,170,.10),transparent 70%),
              radial-gradient(60% 50% at 50% 55%,rgba(212,176,106,.06),transparent 70%);
-  filter:blur(12px);animation:drift 80s ease-in-out infinite alternate}
+  animation:drift 80s ease-in-out infinite alternate}
 @keyframes drift{to{transform:translate3d(3%,-2%,0) rotate(4deg) scale(1.06)}}
 .stage{position:fixed;inset:0;z-index:2;perspective:2200px;perspective-origin:50% 42%;overflow:hidden}
 .world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;
-  transform:translateY(var(--wy,0px)) rotateX(var(--tilt,-12deg)) scale(var(--zoom,.84))}
+  transform:translateY(var(--wy,0px)) rotateX(var(--tilt,-12deg)) scale3d(var(--zoom,.84),var(--zoom,.84),var(--zoom,.84))
+    translateZ(calc(var(--CD)*-.5)) rotateX(var(--pitch,0deg)) rotateY(var(--yaw,0deg)) translateZ(calc(var(--CD)*.5))}
+/* the case and the book are objects, not documents: nothing on them is selected, dragged out or
+   called up by a long press; on the closed case only the astrolabe's rule answers the pointer,
+   and a drag anywhere turns the case */
+html{-webkit-tap-highlight-color:transparent}
+.stage,.ui{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.stage svg{-webkit-user-drag:none}
+.case *:not(.latch):not(.latch *),.at-case .book,.at-case .book *,.opening .book,.opening .book *{pointer-events:none}
+.latch,.latch *{pointer-events:auto}
+.at-case .stage{cursor:grab;touch-action:none}
+.turning-case .stage{cursor:grabbing}
 .rig{position:absolute;width:0;height:0;transform-style:preserve-3d}
 .at-case .rig{animation:bob 7s ease-in-out infinite}
 @keyframes bob{50%{transform:translate3d(0,-7px,0)}}
@@ -62,7 +73,7 @@ a{color:inherit}
 /* ---------- 3. the case ---------- */
 .case{position:absolute;left:calc(var(--CW)*-.5);top:calc(var(--CH)*-.5);width:var(--CW);height:var(--CH);transform-style:preserve-3d;
   transform:translate3d(0,var(--case-y,0px),0);opacity:var(--case-o,1)}
-.case-back{position:absolute;inset:0;transform:translateZ(calc(var(--CD)*-1));background:var(--velvet);
+.case-back{position:absolute;inset:0;transform:translateZ(calc(var(--CD)*-1));background:var(--velvet);backface-visibility:hidden;
   box-shadow:inset 0 0 calc(var(--CW)*.08) rgba(0,0,0,.75)}
 .case-glow{position:absolute;inset:0;transform:translateZ(calc(var(--CD)*-1 + 2px));pointer-events:none;opacity:var(--glow,0);
   background:radial-gradient(55% 46% at 50% 46%,rgba(255,214,150,.5),rgba(255,170,90,.14) 55%,transparent 76%)}
@@ -73,6 +84,18 @@ a{color:inherit}
 .top-out{left:0;top:0;width:100%;height:var(--CD);transform-origin:top;transform:rotateX(-90deg) rotateY(180deg);
   background:linear-gradient(var(--gold-lo),var(--gold) 2px,transparent 2px calc(100% - 3px),var(--gold) calc(100% - 3px),var(--gold-lo)),var(--cloth);filter:brightness(1.18)}
 .bottom-in{left:0;bottom:0;width:100%;height:var(--CD);transform-origin:bottom;transform:rotateX(90deg);background:var(--velvet);filter:brightness(1.1)}
+.bottom-out{left:0;bottom:0;width:100%;height:var(--CD);transform-origin:bottom;transform:rotateX(90deg) rotateY(180deg);
+  background:linear-gradient(var(--gold-lo),var(--gold) 2px,transparent 2px calc(100% - 3px),var(--gold) calc(100% - 3px),var(--gold-lo)),var(--cloth)}
+.left-out,.right-out{top:0;width:var(--CD);height:100%;
+  background:linear-gradient(90deg,var(--gold-lo),var(--gold) 2px,transparent 2px calc(100% - 3px),var(--gold) calc(100% - 3px),var(--gold-lo)),var(--cloth)}
+.left-out{left:0;transform-origin:left;transform:rotateY(90deg) translateX(var(--CD)) rotateY(180deg)}
+.right-out{right:0;transform-origin:right;transform:rotateY(-90deg) translateX(calc(var(--CD)*-1)) rotateY(180deg)}
+.case-back-out{position:absolute;inset:0;transform:translateZ(calc(var(--CD)*-1)) rotateY(180deg);backface-visibility:hidden;overflow:hidden;
+  background:var(--cloth);box-shadow:inset 0 0 0 1px rgba(0,0,0,.5)}
+.case-back-out svg{position:absolute;inset:0;width:100%;height:100%;display:block;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+.top-out::after,.bottom-out::after,.left-out::after,.right-out::after,.case-back-out::after{content:"";position:absolute;inset:0;background:#000;pointer-events:none}
+.top-out::after{opacity:var(--sh-top,0)}.bottom-out::after{opacity:var(--sh-bottom,0)}.left-out::after{opacity:var(--sh-left,0)}
+.right-out::after{opacity:var(--sh-right,0)}.case-back-out::after{opacity:var(--sh-back,0)}
 .left-in{left:0;top:0;width:var(--CD);height:100%;transform-origin:left;transform:rotateY(90deg);background:var(--velvet);filter:brightness(.8)}
 .right-in{right:0;top:0;width:var(--CD);height:100%;transform-origin:right;transform:rotateY(-90deg);background:var(--velvet);filter:brightness(.8)}
 
@@ -84,15 +107,16 @@ a{color:inherit}
 .door-front{transform:translateZ(var(--DT));background:var(--cloth)}
 .door.left .door-front{box-shadow:inset -1px 0 0 rgba(0,0,0,.65),inset -2px 0 0 rgba(255,230,180,.12)}
 .door.right .door-front{box-shadow:inset 1px 0 0 rgba(0,0,0,.65),inset 2px 0 0 rgba(255,230,180,.12)}
-.door-front::after,.door-inner::after{content:"";position:absolute;inset:0;pointer-events:none}
-.door-front::after{background:linear-gradient(105deg,transparent 30%,rgba(255,236,190,.10) 45%,transparent 60%),rgba(0,0,0,var(--shade,0));
-  background-size:300% 100%,auto;animation:foil 9s ease-in-out infinite}
+.door-front::before,.door-inner::after{content:"";position:absolute;inset:0;pointer-events:none}
+.door-front::before{z-index:1;background:#000;opacity:calc(var(--shade,0) + var(--sh-front,0) * .8)}
+.door-front::after{content:"";position:absolute;top:0;bottom:0;left:-100%;width:300%;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,236,190,.10) 48%,transparent 56%);animation:sweep 9s ease-in-out infinite}
 .door-inner{transform:rotateY(180deg);background:var(--noise),radial-gradient(120% 80% at 50% 40%,#25407a,#1a2c58 60%,#111d3c)}
 .door-inner::after{background:rgba(255,196,120,var(--lit,0))}
 .door-edge{position:absolute;top:0;width:var(--DT);height:100%;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi) 45%,var(--gold) 70%,var(--gold-lo))}
 .door.left .door-edge{left:100%;transform-origin:0 50%;transform:translateZ(var(--DT)) rotateY(90deg)}
 .door.right .door-edge{right:100%;transform-origin:100% 50%;transform:translateZ(var(--DT)) rotateY(-90deg)}
-@keyframes foil{0%,55%{background-position:120% 0,0 0}100%{background-position:-20% 0,0 0}}
+@keyframes sweep{0%,55%{transform:translateX(34%)}100%{transform:translateX(-34%)}}
 
 /* the astrolabe's rule is the latch: horizontal locks the doors, turned upright it lets them go */
 .latch{position:absolute;right:calc(var(--CW)*-.21);top:50%;width:calc(var(--CW)*.42);height:calc(var(--CW)*.084);margin-top:calc(var(--CW)*-.042);
@@ -130,9 +154,59 @@ a{color:inherit}
   background:linear-gradient(var(--sd,90deg),rgba(20,12,4,var(--cast,0)),transparent 72%),
              linear-gradient(var(--sd,90deg),rgba(20,12,4,calc(var(--fs,0)*1.25)),rgba(20,12,4,calc(var(--fs,0)*.35)) 62%,rgba(255,246,226,calc(var(--fs,0)*.4)))}
 .face.back::after{--sd:270deg}
-.reading .book{cursor:grab;touch-action:pan-y}
-.reading .book:active{cursor:grabbing}
 .book a,.book button,.book [tabindex]{cursor:pointer}
+
+/* the closed book in its case shows only its cover; everything else waits for the reader */
+.book:not(.flat) .leaf+.leaf,.book:not(.flat)>.book-shadow,.book:not(.flat)>.stack,.book:not(.flat)>.curl,.book:not(.flat)>.hard-shade{display:none}
+
+/* ---------- the reader: once out of its case the book lies flat, like an e-book ---------- */
+.flat .world,.flat .rig{transform:none;transform-style:flat;animation:none}
+.book.flat{transform:translate3d(var(--bx,0px),0,0);transform-style:flat;--W:calc(var(--P)*.982);--Hp:calc(var(--H)*.976);
+  -webkit-user-select:none;user-select:none;touch-action:pinch-zoom}
+.book.flat::before,.book.flat>.block{display:none}
+.book.flat .leaf{position:static;transform-style:flat}
+.book.flat .face{display:none;right:auto;bottom:auto;transform:none;backface-visibility:visible}
+.book.flat .face.on{display:block}
+.book.flat .face::after{background:rgba(16,10,4,var(--shade,0))}
+.reading .book.flat .face.on{cursor:grab}
+.reading .book.flat .face.on:active{cursor:grabbing}
+/* where a face lies: the boards (covers and endpapers) and, a little smaller, the paper pages */
+.book.flat .slot-bl{left:0;top:0;width:50%;height:100%;border-radius:6px 2px 2px 6px}
+.book.flat .slot-br{left:50%;top:0;width:50%;height:100%;border-radius:2px 6px 6px 2px}
+.book.flat .slot-pl{left:.9%;top:1.2%;width:49.1%;height:97.6%}
+.book.flat .slot-pr{left:50%;top:1.2%;width:49.1%;height:97.6%}
+/* a board swinging on its hinge */
+.book.flat .leaf.hardturn{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;z-index:10}
+.book.flat .leaf.hardturn>.face{display:block;left:0;top:0;width:100%;height:100%;backface-visibility:hidden}
+.book.flat .leaf.hardturn>.face.back{transform:rotateY(180deg)}
+.book.flat .leaf.hardturn>.face.back.cover-inside{border-radius:6px 2px 2px 6px}
+.book.flat>.hard-shade{position:absolute;top:1.2%;height:97.6%;width:49.1%;z-index:9;opacity:0;pointer-events:none}
+.hard-shade.r{left:50%;background:linear-gradient(90deg,rgba(10,6,2,.55),rgba(10,6,2,.14) 55%,transparent)}
+.hard-shade.l{left:.9%;background:linear-gradient(270deg,rgba(10,6,2,.55),rgba(10,6,2,.14) 55%,transparent)}
+/* the book's shadow on the table, and the edges of the pages beneath the open ones */
+.book.flat>.book-shadow{position:absolute;top:1%;height:98%;left:50%;width:50%;border-radius:6px;z-index:0;pointer-events:none;
+  box-shadow:0 28px 60px -12px rgba(0,0,0,.8),0 8px 20px rgba(0,0,0,.45)}
+.book.flat>.book-shadow[data-span=both]{left:0;width:100%}
+.book.flat>.book-shadow[data-span=l]{left:0}
+.book.flat>.stack{position:absolute;top:1.2%;height:97.6%;width:49.1%;z-index:2;pointer-events:none}
+.book.flat>.stack.l{left:.9%}
+.book.flat>.stack.r{left:50%}
+/* the page curl: the shadow under the roll, the flap's shadow on the page, the flap's crease and
+   highlight (on the flap itself), and, one page at a time, the mirrored back of the page */
+.book.flat>.curl{position:absolute;left:50%;top:1.2%;width:0;height:0;display:none;pointer-events:none}
+.book.flat>.curl.on{display:block}
+.book.flat>.curl.single{width:var(--W);height:var(--Hp);overflow:hidden}
+.curl>div{position:absolute;pointer-events:none}
+.curl i{position:absolute;left:0;top:0;transform-origin:0 0}
+.curl-under{left:0;top:0;width:var(--W);height:var(--Hp);overflow:hidden;z-index:4}
+.curl-under i{background:linear-gradient(90deg,rgba(30,18,6,.46),rgba(30,18,6,.16) 42%,transparent)}
+.curl-edge{left:calc(var(--W)*-1);top:0;width:calc(var(--W)*2);height:var(--Hp);overflow:hidden;z-index:6}
+.curl.single .curl-edge{left:0;width:var(--W)}
+.curl-edge i{background:linear-gradient(90deg,rgba(30,18,6,.32),transparent)}
+.book.flat .face.flap::after{background:var(--fold);opacity:var(--fold-o,1)}
+.curl-hold{left:0;top:0;width:var(--W);height:var(--Hp);z-index:7}
+.book.flat .curl-hold>.face.ghost{display:block;left:0;top:0;width:100%;height:100%;transform-origin:0 0}
+.curl-hold>.ghost>*{opacity:.13}
 .art{position:absolute;inset:0;width:100%;height:100%;display:block}
 
 /* covers: navy leather with gold tooling */
@@ -147,9 +221,9 @@ a{color:inherit}
   background:linear-gradient(170deg,#fff4cf 10%,#e4c27c 40%,#a87f3c 62%,#f3d993 85%);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 1px 0 rgba(0,0,0,.7)) drop-shadow(0 -.5px 0 rgba(255,244,210,.35))}
 .cover-author{font-family:var(--f-title);font-weight:600;font-size:6.6cqw;letter-spacing:.42em;color:var(--gold);padding-left:.42em}
-.sheen{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;
-  background:linear-gradient(110deg,transparent 35%,rgba(255,244,214,.55) 47%,rgba(255,244,214,.15) 52%,transparent 62%);
-  background-size:320% 100%;background-position:130% 0;animation:foil 8s ease-in-out infinite 1.5s}
+.sheen{position:absolute;inset:0;overflow:hidden;pointer-events:none;mix-blend-mode:overlay}
+.sheen::before{content:"";position:absolute;top:0;bottom:0;left:-100%;width:300%;transform:translateX(34%);
+  background:linear-gradient(110deg,transparent 40%,rgba(255,244,214,.55) 48%,rgba(255,244,214,.15) 51%,transparent 57%);animation:sweep 8s ease-in-out infinite 1.5s}
 .endpaper{position:absolute;inset:2.4% 2.6% 2.4% 2.6%;overflow:hidden;border-radius:1px;
   background:var(--noise),radial-gradient(120% 90% at 50% 40%,#22396e,#182a54 60%,#0f1b3a);box-shadow:0 0 0 1px rgba(0,0,0,.35)}
 .endpaper svg{width:100%;height:100%;display:block;filter:drop-shadow(0 .6px 0 rgba(0,0,0,.6))}
@@ -429,6 +503,7 @@ a{color:inherit}
 .hint{position:absolute;left:0;right:0;bottom:6vh;text-align:center;font-family:var(--f-title);font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:rgba(247,230,181,.75);
   transition:opacity .6s;animation:breathe 3s ease-in-out infinite;pointer-events:none}
 @keyframes breathe{50%{opacity:.45}}
+.hint small{display:block;margin-top:9px;font-size:10px;letter-spacing:.26em;opacity:.65}
 .skip{position:absolute;right:28px;bottom:28px;padding:8px 16px;border:1px solid rgba(212,176,106,.4);border-radius:999px;font-family:var(--f-title);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
   color:rgba(247,230,181,.8);transition:opacity .5s,border-color .3s;opacity:0;pointer-events:none}
 .skip:hover{border-color:var(--gold)}
@@ -450,7 +525,8 @@ a{color:inherit}
 .tool{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(212,176,106,.45);border-radius:50%;background:rgba(10,14,28,.5);transition:border-color .3s}
 .tool:hover{border-color:var(--gold)}
 .tool svg{width:17px;height:17px;fill:none;stroke:var(--gold-hi);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-#sound .mute{display:none}
+#sound .mute,#music .mute{display:none}
+#music[aria-pressed=false] .mute{display:inline}
 #sound[aria-pressed=false] .mute{display:inline}
 #sound[aria-pressed=false] .wave{display:none}
 .indicator{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-family:var(--f-title);font-size:12px;letter-spacing:.3em;color:rgba(247,230,181,.6);opacity:0;transition:opacity .6s}
