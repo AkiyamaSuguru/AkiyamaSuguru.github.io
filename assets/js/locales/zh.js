@@ -85,7 +85,7 @@ export default {
   'pl1.c3': '悬浮交互图与多子图排版；可导出 600 dpi 图片或交互式 HTML',
   'pl1.note': '可导出 600 dpi 图片',
   'pl2.no': '图版 贰',
-  'pl2.meta': 'Python · 开发中',
+  'pl2.meta': 'Python · 开发中 · AGPL-3.0',
   'pl2.o1': '分析',
   'pl2.o2': '绘图',
   'pl2.o3': '计算',

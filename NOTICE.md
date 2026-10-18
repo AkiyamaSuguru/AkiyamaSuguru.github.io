@@ -33,7 +33,7 @@ The following are **not** covered by the AGPL or by any other license. Copyright
 
 These files are reserved in full: everything in `assets/img/` and `assets/audio/`, and `assets/js/book/emblem.js`, `assets/js/book/ornaments.js`, `assets/js/book/illustrations.js`, `assets/js/book/xps.js` and `assets/js/locales/zh.js`. They are marked `LicenseRef-All-Rights-Reserved`.
 
-**No use of any kind is permitted without the author's prior written permission**, whether commercial or non-commercial. In particular, you may not copy, reproduce, download for reuse, modify, adapt, translate, redistribute, publish, display or perform them elsewhere, include them in other works or products, use them as a logo or mark, or use them for text and data mining or to train machine-learning models.
+**No use of any kind is permitted without the author's prior written permission**, whether commercial or non-commercial. In particular, you may not copy, reproduce, download for reuse, modify, adapt, translate, redistribute, publish, display or perform them elsewhere, include them in other works or products, use them as a logo or mark, or use them for text and data mining or to train machine-learning models. This reservation of text and data mining is also stated in machine-readable form: in `robots.txt`, in `/.well-known/tdmrep.json` and in the page's `tdm-reservation` tag.
 
 Viewing them on the website, and viewing or forking this public repository on GitHub as GitHub's Terms of Service allow, give no other rights. Keeping the copyright and license notices that the AGPL requires, which name the author, needs no permission.
 
@@ -86,7 +86,7 @@ AGPL 是强 Copyleft（具有“传染性”）的许可证：分享修改后的
 
 以下文件整体保留：`assets/img/` 与 `assets/audio/` 中的全部文件，以及 `assets/js/book/emblem.js`、`assets/js/book/ornaments.js`、`assets/js/book/illustrations.js`、`assets/js/book/xps.js` 与 `assets/js/locales/zh.js`。它们标为 `LicenseRef-All-Rights-Reserved`。
 
-**未经作者事先书面许可，禁止以任何形式使用**，无论商业或非商业用途。尤其不得复制、转载、为再利用而下载、修改、改编、翻译、再分发、发布，不得在别处展示或表演，不得收入其他作品或产品，不得用作标志或标识，也不得用于文本与数据挖掘或训练机器学习模型。
+**未经作者事先书面许可，禁止以任何形式使用**，无论商业或非商业用途。尤其不得复制、转载、为再利用而下载、修改、改编、翻译、再分发、发布，不得在别处展示或表演，不得收入其他作品或产品，不得用作标志或标识，也不得用于文本与数据挖掘或训练机器学习模型。这一对文本与数据挖掘的保留，同时以机器可读的形式写在 `robots.txt`、`/.well-known/tdmrep.json` 和页面的 `tdm-reservation` 标记中。
 
 在本网站上浏览这些内容，以及 GitHub 服务条款所允许的对本公开仓库的查看与派生（fork），均不授予任何其他权利。保留 AGPL 所要求的版权与许可声明（其中含有作者姓名）无需许可。
 

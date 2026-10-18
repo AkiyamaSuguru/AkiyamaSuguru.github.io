@@ -43,6 +43,8 @@ Page addresses, in order: `cover` `title` `contents` `preface` `about` `open-sou
 | `assets/img/emblem.svg`, `favicon.png`, `apple-touch-icon.png`, `social.jpg` | Tab, home-screen and link-preview images | **Reserved** |
 | `LICENSE` | The GNU AGPL-3.0, which covers the code | |
 | `NOTICE.md` | Exactly what is open source and what is reserved, in English and Chinese | |
+| `robots.txt` | Search engines welcome; crawlers that gather data for AI training are asked to keep out | |
+| `.well-known/tdmrep.json` | Text and data mining reserved, machine-readably (W3C TDMRep), like the `tdm-reservation` tag in `index.html` | |
 
 ## Editing text
 
