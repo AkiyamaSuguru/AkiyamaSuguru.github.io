@@ -50,12 +50,14 @@ export function createCase({sound, scene, book, still, onOpened}) {
       const lit = .38 + .62 * Math.max(0, dot(turn(n), LIGHT));
       set(box, '--sh-' + name, ((1 - lit) * .85).toFixed(3));
     }
-    /* on the back, a broad glint slides across the cloth as the case turns, brightest when the back
-       faces the light, as the gold on the doors catches it; the back's own x axis points left */
-    const u = dot(turn([-1, 0, 0]), HALF), v = dot(turn([0, 1, 0]), HALF);
-    set(box, '--glint-x', clamp(50 + u * 110, 8, 92).toFixed(1) + '%');
-    set(box, '--glint-y', clamp(40 + v * 80, 6, 80).toFixed(1) + '%');
-    set(box, '--glint', (.26 * Math.max(0, dot(turn(FACES.back), HALF)) ** 2).toFixed(3));
+    /* front and back alike: a broad glint slides across the cloth as the case turns, brightest when
+       the face meets the light; each face measures it along its own x axis (the back's points left) */
+    for (const [k, n, across] of [['f', FACES.front, [1, 0, 0]], ['b', FACES.back, [-1, 0, 0]]]) {
+      const u = dot(turn(across), HALF), v = dot(turn([0, 1, 0]), HALF);
+      set(box, `--glare-${k}x`, clamp(50 + u * 110, 8, 92).toFixed(1) + '%');
+      set(box, `--glare-${k}y`, clamp(40 + v * 80, 6, 80).toFixed(1) + '%');
+      set(box, `--glare-${k}`, (.26 * Math.max(0, dot(turn(n), HALF)) ** 2).toFixed(3));
+    }
   }
   const atCase = () => body.classList.contains('at-case') && !opening;
 
