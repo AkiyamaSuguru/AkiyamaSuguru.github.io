@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-FileCopyrightText: 2026 Jie Ma
 // SPDX-License-Identifier: AGPL-3.0-only
 /* Bilingual text (English / Chinese).
    - English is read from the page once at start-up; Chinese comes from locales/zh.js.
@@ -8,8 +8,8 @@ import zh from './locales/zh.js';
 
 /* English for strings that only JavaScript shows (everything else is read from the DOM). */
 const en = {
-  'meta.title': 'Jay Ma · The Book of Star Trails',
-  'meta.desc': 'Jay Ma builds open-source tools for materials characterization data and researches SiC coatings for molten salt reactors (M.S., Shanghai University and SINAP, CAS).',
+  'meta.title': 'Jie Ma · The Book of Star Trails',
+  'meta.desc': 'Jie Ma builds open-source tools for materials characterization data and researches SiC coatings for molten salt reactors (M.S., Shanghai University and SINAP, CAS).',
   'ui.copied': 'Copied',
   'ui.cover': 'Cover',
   'ui.backcover': 'Back cover',

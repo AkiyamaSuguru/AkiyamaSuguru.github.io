@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-FileCopyrightText: 2026 Jie Ma
 // SPDX-License-Identifier: AGPL-3.0-only
 /* Background music: "A Memory Among the Stars", an original piece for this book (piano, violin,
    cello and harp, about 91 seconds) that loops without a seam. The file holds the loop with a few

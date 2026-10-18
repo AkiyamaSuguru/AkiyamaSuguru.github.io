@@ -1,8 +1,8 @@
-// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-FileCopyrightText: 2026 Jie Ma
 // SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
 /* The author's emblem: an M above two star trails, redrawn for this book from its TikZ original.
 
-   Copyright (C) 2026 Jay Ma. All rights reserved: no use in any form without permission.
+   Copyright (C) 2026 Jie Ma. All rights reserved: no use in any form without permission.
    This file and the emblem it draws are design, NOT covered by the GNU AGPL-3.0 that licenses the
    code (see NOTICE.md). If you reuse the code, replace this file with a mark of your own. */
 import {f, khatam, spark} from './ornaments.js';

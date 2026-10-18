@@ -1,8 +1,8 @@
-# The Book of Star Trails · Jay Ma
+# The Book of Star Trails · Jie Ma
 
 **Live site: https://akiyamasuguru.github.io/**
 
-The homepage of Jay Ma, bound as a book. While the page loads, a shooting star crosses a dark sky; then a hardcover case waits under the night sky, an object you can turn round in 3D. Press the astrolabe's rule and its doors swing open until they lie flat, the book rises out while the case sinks away, and the book, now lying flat like an e-book, opens its cover. Paper pages turn with a page curl that follows your hand; the covers swing over as boards. Inside are a preface, the author, three open-source projects (OpenXPSAnalyzer, opengma and this book) with two pages on what of this book is open and what is reserved, research, publications, a timeline, methods and letters, with a quiet piece of music in the background.
+The homepage of Jie Ma, bound as a book. While the page loads, a shooting star crosses a dark sky; then a hardcover case waits under the night sky, an object you can turn round in 3D. Press the astrolabe's rule and its doors swing open until they lie flat, the book rises out while the case sinks away, and the book, now lying flat like an e-book, opens its cover. Paper pages turn with a page curl that follows your hand; the covers swing over as boards. Inside are a preface, the author, three open-source projects (OpenXPSAnalyzer, opengma and this book) with two pages on what of this book is open and what is reserved, research, publications, a timeline, methods and letters, with a quiet piece of music in the background.
 
 English by default, with a Chinese edition. No build step: plain HTML, CSS and native ES modules, served by GitHub Pages.
 
@@ -89,7 +89,7 @@ The site is entirely static: no build step and no server code, file names are ca
 - **Reserved: design.** The emblem in every form, all icons, and every ornament, pattern, frame, cover, illustration and other design element, in whatever form, including those drawn or embedded by code (`emblem.js`, `ornaments.js`, `illustrations.js`, `xps.js`, `assets/img/`, and the icons inside `index.html` and `book.css`).
 - **Reserved: content and music.** The title and all the text in both languages (`index.html`, `zh.js`), and the music (`assets/audio/`).
 
-© 2026 Jay Ma. Everything the AGPL does not cover is reserved: **no use in any form** without written permission, commercial or not, including text and data mining and AI training. Fair use that the law allows (personal study, research, or a brief quotation that names its source) needs no permission; please keep within it.
+© 2026 Jie Ma. Everything the AGPL does not cover is reserved: **no use in any form** without written permission, commercial or not, including text and data mining and AI training. Fair use that the law allows (personal study, research, or a brief quotation that names its source) needs no permission; please keep within it.
 
 If you build on the code, replace everything reserved with your own.
 
@@ -102,6 +102,6 @@ If you build on the code, replace everything reserved with your own.
 - **保留：设计**。徽标的一切形式、所有图标，以及一切纹饰、图案、边框、封面、插图与其他设计元素，无论以何种形式存在，包括由代码绘制或嵌入代码之中的部分（`emblem.js`、`ornaments.js`、`illustrations.js`、`xps.js`、`assets/img/`，以及 `index.html` 与 `book.css` 中的图标）。
 - **保留：内容与音乐**。书名与全部中英文文字（`index.html`、`zh.js`），以及背景音乐（`assets/audio/`）。
 
-© 2026 Jay Ma。AGPL 不涵盖的一切均保留所有权利：未经书面许可，**禁止以任何形式使用**，无论商业或非商业用途，包括文本与数据挖掘及 AI 训练。法律允许的合理使用（个人学习、研究，或注明出处的适当引用）无需许可，请遵守这一界限。
+© 2026 Jie Ma。AGPL 不涵盖的一切均保留所有权利：未经书面许可，**禁止以任何形式使用**，无论商业或非商业用途，包括文本与数据挖掘及 AI 训练。法律允许的合理使用（个人学习、研究，或注明出处的适当引用）无需许可，请遵守这一界限。
 
 基于本项目的代码开发时，请将所有保留内容替换为你自己的。

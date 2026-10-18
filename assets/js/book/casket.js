@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-FileCopyrightText: 2026 Jie Ma
 // SPDX-License-Identifier: AGPL-3.0-only
 /* The case. While it is closed it is an object in 3D: drag it (or use the arrow keys) to turn it
    round and look at it from any side; the light falls on each face as it turns. Press the

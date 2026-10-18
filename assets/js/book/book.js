@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-FileCopyrightText: 2026 Jie Ma
 // SPDX-License-Identifier: AGPL-3.0-only
 /* The book. Until the case opens it is a closed volume lying in its case, in 3D. flatten() then
    hands it to the reader, which is flat, like an e-book:

@@ -1,7 +1,7 @@
 # Notice: what is open source here, and what is not
 
-**The Book of Star Trails**, the homepage of Jay Ma: https://akiyamasuguru.github.io/
-Copyright © 2026 Jay Ma (AkiyamaSuguru)
+**The Book of Star Trails**, the homepage of Jie Ma: https://akiyamasuguru.github.io/
+Copyright © 2026 Jie Ma (AkiyamaSuguru)
 
 **Only the code is open source.** Everything else belongs to the author, with all rights reserved: the personal information, the design (the emblem, the icons and every other design element) and the content.
 
@@ -24,7 +24,7 @@ Each of these files starts with `SPDX-License-Identifier: AGPL-3.0-only`. The tw
 
 ## 2. Reserved: not open source
 
-The following are **not** covered by the AGPL or by any other license. Copyright © 2026 Jay Ma. All rights reserved.
+The following are **not** covered by the AGPL or by any other license. Copyright © 2026 Jie Ma. All rights reserved.
 
 1. **Personal information:** the author's name, biography, education, research, thesis, publications, timeline, contact details and letters, and the names and details of the other people mentioned in the book.
 2. **Design:** the author's emblem in every form and variant (including the ex libris, the cameo, the wax seal and the back-cover emblem); all icons; and the ornaments, patterns, frames, covers, endpapers, the case and its lining, seals, initials, figures, charts, maps, star charts and every other illustration or design element. This holds in any form, whether image files, SVG, or artwork drawn or embedded by code, wherever it appears, including the icons inline in `index.html` and the images embedded in `book.css`.
@@ -55,8 +55,8 @@ To ask for permission, write to the author at the address on the book's letter p
 
 # 声明：本项目的开源范围与保留权利
 
-**星轨之书**（The Book of Star Trails），Jay Ma 的个人主页：https://akiyamasuguru.github.io/
-版权所有 © 2026 Jay Ma (AkiyamaSuguru)
+**星轨之书**（The Book of Star Trails），Jie Ma 的个人主页：https://akiyamasuguru.github.io/
+版权所有 © 2026 Jie Ma (AkiyamaSuguru)
 
 **本项目只开源代码**。除代码以外的一切均归作者所有，保留所有权利：个人信息、设计（徽标、图标及其他一切设计元素）以及内容。
 
@@ -77,7 +77,7 @@ AGPL 是强 Copyleft（具有“传染性”）的许可证：分享修改后的
 
 ## 二、保留权利：不开源
 
-以下内容**不适用** AGPL，也不适用任何其他许可。版权所有 © 2026 Jay Ma，保留所有权利。
+以下内容**不适用** AGPL，也不适用任何其他许可。版权所有 © 2026 Jie Ma，保留所有权利。
 
 1. **个人信息**：作者的姓名、简介、教育经历、研究、学位论文、论文、时间线、联系方式与书信，以及书中提及的其他人的姓名与信息。
 2. **设计**：作者徽标的一切形式与变体（包括藏书票、肖像章、火漆印与封底徽标）；所有图标；以及纹饰、图案、边框、封面、环衬、书匣及其内衬、印章、首字母饰、插图、图表、地图、星图和其他一切插图与设计元素。无论以何种形式存在（图片文件、SVG，或由代码绘制、嵌入代码之中），无论出现在何处（包括 `index.html` 中的内联图标与 `book.css` 中嵌入的图像），均在此列。

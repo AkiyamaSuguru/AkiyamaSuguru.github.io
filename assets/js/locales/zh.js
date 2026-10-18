@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-FileCopyrightText: 2026 Jie Ma
 // SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
 /* The book's Chinese text: content, all rights reserved, not open source; no use in any form
    without permission (see NOTICE.md).
@@ -7,8 +7,8 @@
    English lives in index.html itself, so editing English means editing the page,
    and editing Chinese means editing this file. Values may contain inline HTML. */
 export default {
-  'meta.title': 'Jay Ma · 星轨之书',
-  'meta.desc': 'Jay Ma 开发用于材料表征数据的开源工具，并研究熔盐堆用 SiC 涂层（上海大学与中国科学院上海应用物理研究所联合培养硕士）。',
+  'meta.title': 'Jie Ma · 星轨之书',
+  'meta.desc': 'Jie Ma 开发用于材料表征数据的开源工具，并研究熔盐堆用 SiC 涂层（上海大学与中国科学院上海应用物理研究所联合培养硕士）。',
 
   /* the case and the interface */
   'case.open': '打开书匣',
@@ -49,7 +49,7 @@ export default {
   'pf.p1': '是<strong>上海大学</strong>与<strong>中国科学院上海应用物理研究所</strong>联合培养的凝聚态物理专业硕士研究生，导师为 Hefei Huang 教授和 Yibing Zhang 教授。',
   'pf.p2': '我的研究对象是熔盐堆用<strong>核石墨表面 SiC 涂层</strong>：沉积温度如何影响涂层的结构与化学计量比、涂层在熔盐中如何腐蚀，以及涂层对离子辐照的响应。',
   'pf.p3': '研究之余，我开发用于材料表征数据的开源 Python 工具。这本书把两者收在一起：工具、实验，以及它们之间的路。',
-  'pf.sign': '—— Jay Ma，于上海',
+  'pf.sign': '—— Jie Ma，于上海',
   'ab.title': '作者小传',
   'ab.k.name': '姓名',
   'ab.k.program': '专业',
@@ -255,7 +255,7 @@ export default {
   'lt.body': '谢谢你读到这里。如果书中有什么引起了你的疑问或想法，欢迎来信。',
   'lt.write': '来信请寄',
   'lt.find': '也可以在这里找到我',
-  'lt.sign': 'Jay Ma 敬上',
+  'lt.sign': 'Jie Ma 敬上',
   'lt.folded': '尚未拆封 · 先揭开信封上的火漆',
 
   /* the end */
