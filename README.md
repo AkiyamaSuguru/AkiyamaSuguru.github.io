@@ -2,7 +2,7 @@
 
 **Live site: https://akiyamasuguru.github.io/**
 
-The homepage of Jay Ma, bound as a book. A hardcover case waits under a night sky, an object you can turn round in 3D. Press the astrolabe's rule and its doors swing open until they lie flat, the book rises out while the case sinks away, and the book, now lying flat like an e-book, opens its cover. Paper pages turn with a page curl that follows your hand; the covers swing over as boards. Inside are a preface, the author, the open-source projects (OpenXPSAnalyzer, opengma and this book), research, publications, a timeline, methods and letters, with a quiet piece of music in the background.
+The homepage of Jay Ma, bound as a book. While the page loads, a shooting star crosses a dark sky; then a hardcover case waits under the night sky, an object you can turn round in 3D. Press the astrolabe's rule and its doors swing open until they lie flat, the book rises out while the case sinks away, and the book, now lying flat like an e-book, opens its cover. Paper pages turn with a page curl that follows your hand; the covers swing over as boards. Inside are a preface, the author, the open-source projects (OpenXPSAnalyzer, opengma and this book), research, publications, a timeline, methods and letters, with a quiet piece of music in the background.
 
 English by default, with a Chinese edition. No build step: plain HTML, CSS and native ES modules, served by GitHub Pages.
 
@@ -24,7 +24,7 @@ Page addresses, in order: `cover` `title` `contents` `preface` `about` `open-sou
 | --- | --- |
 | `index.html` | The book: 13 leaves (26 pages) and **all English text** |
 | `assets/css/book.css` | All styles: the case, the book, each page, the phone layout, Chinese overrides |
-| `assets/js/book/main.js` | Entry point: draws the artwork, sizes the book, keeps the page address in the URL |
+| `assets/js/book/main.js` | Entry point: draws the artwork, sizes the book, keeps the page address in the URL, and lifts the shooting-star intro once the type has loaded |
 | `assets/js/book/casket.js` | The case: turning it in 3D with light on each face, and its opening (latch, doors that open flat, light and gold dust, the book rising) |
 | `assets/js/book/book.js` | The reader: two pages or one, page curls and board swings, dragging, the corner that lifts, addresses, keys |
 | `assets/js/book/curl.js` | The geometry of the page curl: where the paper rolls over, the folded flap, the reflection that lays the other side onto it |

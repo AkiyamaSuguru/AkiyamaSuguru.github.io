@@ -81,7 +81,6 @@ export function setLang(next) {
 
 export function initI18n() {
   apply();
-  root.classList.remove('i18n-wait');
   const toggle = () => setLang(lang === 'zh' ? 'en' : 'zh');
   document.querySelectorAll('[data-lang-toggle]').forEach(b => b.addEventListener('click', toggle));
   /* press L to switch, unless typing or using a shortcut */

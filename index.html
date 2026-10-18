@@ -24,9 +24,9 @@
   var d = document.documentElement, q = new URLSearchParams(location.search).get('lang'), s = null;
   try { s = localStorage.getItem('lang'); } catch (e) {}
   var lang = /^(en|zh)$/.test(q) ? q : /^(en|zh)$/.test(s) ? s : 'en';
-  d.className = 'js' + (lang === 'zh' ? ' i18n-wait' : '');
+  d.className = 'js';
   d.dataset.lang = lang;
-  if (lang === 'zh') { d.lang = 'zh-CN'; setTimeout(function () { d.classList.remove('i18n-wait'); }, 1500); }
+  if (lang === 'zh') d.lang = 'zh-CN';
 })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,10 +34,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/book.css">
-<noscript><style>#hint{display:none}</style></noscript>
+<noscript><style>#hint,.intro{display:none}</style></noscript>
 <script type="module" src="assets/js/book/main.js"></script>
 </head>
 <body class="at-case">
+<div class="intro" id="intro" aria-hidden="true"><i class="meteor"></i><i class="meteor faint"></i></div>
 
 <canvas id="sky" aria-hidden="true"></canvas>
 <div class="nebula" aria-hidden="true"></div>
@@ -63,6 +64,7 @@
           <div class="door-face door-front"><svg viewBox="0 0 300 800" preserveAspectRatio="none" aria-hidden="true"><use href="#art-case-front"/></svg></div>
           <div class="door-face door-inner"><svg viewBox="0 0 300 800" preserveAspectRatio="none" aria-hidden="true"><use href="#art-lining"/></svg></div>
           <div class="door-edge"></div>
+          <i class="rim side"></i><i class="rim top"></i><i class="rim bottom"></i>
           <button class="latch" id="latch" type="button" aria-label="Open the case" data-i18n-attr="aria-label:case.open">
             <svg viewBox="-120 -24 240 48" aria-hidden="true" data-art="latch"></svg>
           </button>
@@ -71,6 +73,7 @@
           <div class="door-face door-front"><svg viewBox="300 0 300 800" preserveAspectRatio="none" aria-hidden="true"><use href="#art-case-front"/></svg></div>
           <div class="door-face door-inner"><svg viewBox="0 0 300 800" preserveAspectRatio="none" aria-hidden="true"><use href="#art-lining" transform="matrix(-1 0 0 1 300 0)"/></svg></div>
           <div class="door-edge"></div>
+          <i class="rim side"></i><i class="rim top"></i><i class="rim bottom"></i>
         </div>
         <div class="seam-light"></div>
         <div class="case-bloom"></div>

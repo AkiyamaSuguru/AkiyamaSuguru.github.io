@@ -81,3 +81,19 @@ addEventListener('keydown', e => {
   if (e.key.toLowerCase() === 'm' && !e.metaKey && !e.ctrlKey && !e.altKey) { sound.on = !sound.on; syncSound(); }
 });
 syncSound();
+
+/* the way in: the intro's shooting star keeps the sky dark until the type and the artwork are ready,
+   for at least one pass of the star */
+const intro = document.getElementById('intro');
+const faces = ['600 1em Cinzel', '1em "EB Garamond"', 'italic 1em "EB Garamond"'];
+if (document.documentElement.lang.startsWith('zh')) faces.push('500 1em "Noto Serif SC"', '1em "LXGW WenKai"');
+const fonts = Promise.race([
+  Promise.all(faces.map(f => document.fonts ? document.fonts.load(f, /SC|WenKai/.test(f) ? '星轨之书' : 'Aa').catch(() => {}) : null))
+    .then(() => document.fonts && document.fonts.ready),
+  new Promise(r => setTimeout(r, 2800)),
+]);
+const pass = new Promise(r => setTimeout(r, still ? 0 : Math.max(0, 1500 - performance.now())));
+Promise.all([fonts, pass]).then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+  intro.classList.add('done');
+  setTimeout(() => intro.remove(), 1000);
+})));
