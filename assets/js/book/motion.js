@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* Small animation toolkit: eased tweens, damped springs and waits, all of which finish
    at once when the opening is skipped. */
 let skipping = false;

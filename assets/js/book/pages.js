@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* Interactive parts of the pages: copy seals, the citation slip, the coating cross-section,
    the map and the year list (they light each other up), the star charts, and the sealed letter. */
 import {t, onLangChange} from '../i18n.js';

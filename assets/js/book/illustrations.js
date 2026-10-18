@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+// Design: all rights reserved, not open source; no use in any form without permission (see NOTICE.md).
 /* Page illustrations: the ex libris, cameo and back cover (set around the emblem from emblem.js),
    the coating cross-section, a crystal sketch, the Yangtze map, the star charts, the envelope and
    the binding diagram. Ink on paper unless noted. */

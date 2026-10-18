@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* Sounds, synthesised with Web Audio so there are no recordings to license or download:
    a latch click, a soft chime, the doors' air and creak, page and cover turns, a riffle.
    Audio starts only after the visitor's first click (browser autoplay rules). */

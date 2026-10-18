@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* Entry point for The Book of Star Trails. */
 import {initI18n} from '../i18n.js';
 import * as art from './ornaments.js';

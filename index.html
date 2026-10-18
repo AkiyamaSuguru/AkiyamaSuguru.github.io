@@ -1,4 +1,8 @@
 <!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 Jay Ma
+     SPDX-License-Identifier: AGPL-3.0-only AND LicenseRef-All-Rights-Reserved
+     Only the markup of this page is open source (AGPL-3.0-only). Its text, the personal information
+     and the icons in it are reserved, with no use in any form without permission: see NOTICE.md. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -124,11 +128,11 @@
                 <li class="front-matter"><a href="#preface"><b>✦</b><span data-i18n="toc.pf">Preface</span><i></i><em>iv</em></a></li>
                 <li class="front-matter"><a href="#about"><b>✦</b><span data-i18n="toc.ab">About the Author</span><i></i><em>v</em></a></li>
                 <li><a href="#open-source"><b>I</b><span data-i18n="toc.c1">Open Source</span><i></i><em>1</em></a></li>
-                <li><a href="#research"><b>II</b><span data-i18n="toc.c2">Research</span><i></i><em>6</em></a></li>
-                <li><a href="#publications"><b>III</b><span data-i18n="toc.c3">Publications</span><i></i><em>10</em></a></li>
-                <li><a href="#timeline"><b>IV</b><span data-i18n="toc.c4">Timeline</span><i></i><em>12</em></a></li>
-                <li><a href="#methods"><b>V</b><span data-i18n="toc.c5">Methods &amp; Tools</span><i></i><em>14</em></a></li>
-                <li><a href="#letters"><b>✉</b><span data-i18n="toc.c6">Letters</span><i></i><em>16</em></a></li>
+                <li><a href="#research"><b>II</b><span data-i18n="toc.c2">Research</span><i></i><em>8</em></a></li>
+                <li><a href="#publications"><b>III</b><span data-i18n="toc.c3">Publications</span><i></i><em>12</em></a></li>
+                <li><a href="#timeline"><b>IV</b><span data-i18n="toc.c4">Timeline</span><i></i><em>14</em></a></li>
+                <li><a href="#methods"><b>V</b><span data-i18n="toc.c5">Methods &amp; Tools</span><i></i><em>16</em></a></li>
+                <li><a href="#letters"><b>✉</b><span data-i18n="toc.c6">Letters</span><i></i><em>18</em></a></li>
               </ol>
               <p class="toc-note" data-i18n="toc.note">Turn a page by clicking it, dragging its edge, or with ← and →.</p>
               <p class="folio">iii</p>
@@ -277,8 +281,7 @@
               <ul class="stars">
                 <li data-i18n="pl3.c1">Two languages, and an address for every page</li>
                 <li data-i18n="pl3.c2">Pages you can drag, with shadows and synthesized sounds</li>
-                <li data-i18n="pl3.c3">Code under GNU AGPL-3.0: changed copies, even websites, must share their source</li>
-                <li data-i18n="pl3.c4">The emblem and all icon designs are reserved, with no commercial use</li>
+                <li data-i18n="pl3.c3">Code under GNU AGPL-3.0; the designs and the content stay reserved</li>
               </ul>
               <div class="slip-wrap">
                 <div class="slip"><code>$ git clone https://github.com/<wbr>AkiyamaSuguru/<wbr>AkiyamaSuguru.github.io</code></div>
@@ -291,7 +294,7 @@
           </section>
         </div>
 
-        <!-- leaf 5: the binding / chapter II -->
+        <!-- leaf 5: the binding / what is open -->
         <div class="leaf page">
           <section class="face front paper binding" data-page="binding" aria-label="The Binding" data-i18n-attr="aria-label:bd.title">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -311,6 +314,50 @@
               <p class="folio">5</p>
             </div>
           </section>
+          <section class="face back paper terms" data-page="license" aria-label="What Is Open" data-i18n-attr="aria-label:lc.title">
+            <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
+            <div class="pg">
+              <p class="run-head" data-i18n="ch1.run">Chapter I · Open Source</p>
+              <h2 class="pg-title small" data-i18n="lc.title">What Is Open</h2>
+              <svg class="rule" viewBox="-150 -12 300 24" aria-hidden="true"><use href="#o-divider" fill="url(#g-ink) #86663a" stroke="url(#g-ink) #86663a"/></svg>
+              <p class="body-text" data-i18n="lc.lead">Only the code is open source, under the <span class="nobr">GNU AGPL-3.0</span>, a copyleft license: use it, study it, change it and share it, and share any changed version alike, with its full source, even if it only runs as a website.</p>
+              <dl class="legend">
+                <div><dt>a</dt><dd><b>index.html</b><span data-i18n="lc.a">the markup, without its words or icons</span></dd></div>
+                <div><dt>b</dt><dd><b>book.css</b><span data-i18n="lc.b">the styles, without the icons inside them</span></dd></div>
+                <div><dt>c</dt><dd><b>book.js · curl.js · casket.js</b><span data-i18n="lc.c">the reader, the page curl and the case</span></dd></div>
+                <div><dt>d</dt><dd><b>scene.js · sound.js · music.js</b><span data-i18n="lc.d">the sky, the sounds and the music player</span></dd></div>
+                <div><dt>e</dt><dd><b>pages.js · motion.js · main.js · i18n.js</b><span data-i18n="lc.e">the pages' interactions, motion and two languages</span></dd></div>
+              </dl>
+              <p class="bd-foot" data-i18n="lc.foot">Keep the notices, and mark what you change.</p>
+              <a class="plate-link" href="https://github.com/AkiyamaSuguru/AkiyamaSuguru.github.io/blob/main/LICENSE" target="_blank" rel="noopener">LICENSE ↗</a>
+              <p class="note" data-i18n="lc.note">free as in freedom</p>
+              <p class="folio">6</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- leaf 6: what is reserved / chapter II -->
+        <div class="leaf page">
+          <section class="face front paper terms reserved" data-page="reserved" aria-label="What Is Reserved" data-i18n-attr="aria-label:rv.title">
+            <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
+            <div class="pg">
+              <p class="run-head" data-i18n="ch1.run">Chapter I · Open Source</p>
+              <h2 class="pg-title small" data-i18n="rv.title">What Is Reserved</h2>
+              <svg class="rule" viewBox="-150 -12 300 24" aria-hidden="true"><use href="#o-divider" fill="url(#g-ink) #86663a" stroke="url(#g-ink) #86663a"/></svg>
+              <p class="body-text" data-i18n="rv.lead">Everything else belongs to the author. It is not open source, and no license covers it.</p>
+              <dl class="legend">
+                <div><dt>a</dt><dd><b data-i18n="rv.at">Personal information</b><span data-i18n="rv.a">name, life, research, papers and letters</span></dd></div>
+                <div><dt>b</dt><dd><b data-i18n="rv.bt">Design</b><span data-i18n="rv.b">the emblem, the icons, the ornaments, the covers, the case and every illustration, even where code draws them</span></dd></div>
+                <div><dt>c</dt><dd><b data-i18n="rv.ct">Words and music</b><span data-i18n="rv.c">the text in both languages, and the music</span></dd></div>
+              </dl>
+              <p class="stamp" data-i18n="rv.stamp">All rights reserved</p>
+              <p class="rv-ban" data-i18n="rv.ban">No use in any form without the author's written permission.</p>
+              <p class="bd-foot" data-i18n="rv.fair">Fair use, as the law allows, needs no permission: study, research, or a brief quotation that names its source. Anything more does.</p>
+              <a class="plate-link" href="https://github.com/AkiyamaSuguru/AkiyamaSuguru.github.io/blob/main/NOTICE.md" target="_blank" rel="noopener">NOTICE ↗</a>
+              <p class="note" data-i18n="rv.note">please use fairly</p>
+              <p class="folio">7</p>
+            </div>
+          </section>
           <section class="face back paper chapter research-open" data-page="research" aria-label="Chapter II · Research" data-i18n-attr="aria-label:ch2.label">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
             <div class="pg">
@@ -323,12 +370,12 @@
               <p class="thesis-meta" data-i18n="ch2.meta">Shanghai Institute of Applied Physics, CAS · Advisor: Prof. Hefei Huang</p>
               <p class="stamp" data-i18n="ch2.status">In progress</p>
               <p class="lead"><span class="initial"><svg viewBox="0 0 100 100" aria-hidden="true" data-art="initial"></svg><b data-i18n="ch2.initial">H</b></span><span data-i18n="ch2.lead">ow does a thin ceramic coating keep molten salt out of nuclear graphite? I study CVD-SiC coatings deposited at different temperatures: their structure and stoichiometry, how they corrode in molten salt, and how they respond to ion irradiation.</span></p>
-              <p class="folio">6</p>
+              <p class="folio">8</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 6: plate III cross-section / the thesis in three stages -->
+        <!-- leaf 7: plate IV cross-section / the thesis in three stages -->
         <div class="leaf page">
           <section class="face front paper plate xsec-page" data-page="cross-section" aria-label="Plate IV · Cross-section">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -350,7 +397,7 @@
               </figure>
               <p class="xsec-info" id="xsec-info" aria-live="polite" data-i18n="rs.info.idle">Touch a layer or a label to see what it does.</p>
               <p class="note" data-i18n="px.note">touch a layer</p>
-              <p class="folio">7</p>
+              <p class="folio">9</p>
             </div>
           </section>
           <section class="face back paper stages-page" data-page="stages" aria-label="The thesis in three stages" data-i18n-attr="aria-label:st.title">
@@ -364,12 +411,12 @@
                 <li class="live"><p class="ph" data-i18n="rs.p3.ph">03 · In progress</p><h3 data-i18n="rs.p3.h">Irradiation</h3><p data-i18n="rs.p3.t">Ion ranges and displacement damage (dpa) calculated with SRIM and custom Python post-processing to set the irradiation parameters. The irradiation experiments are complete; post-irradiation characterization is in progress.</p></li>
               </ol>
               <p class="tags">CVD-SiC · <span data-i18n="rs.tag.gra">Nuclear graphite</span> · <span data-i18n="rs.tag.pyc">PyC reference</span> · <span data-i18n="rs.tag.salt">Molten salt</span> · SRIM · dpa · <span data-i18n="rs.tag.ion">Ion irradiation</span></p>
-              <p class="folio">8</p>
+              <p class="folio">10</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 7: earlier work / chapter III -->
+        <!-- leaf 8: earlier work / chapter III -->
         <div class="leaf page">
           <section class="face front paper early" data-page="early-work" aria-label="Earlier work" data-i18n-attr="aria-label:ew.title">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -386,7 +433,7 @@
               <p class="stamp done" data-i18n="rs2.status">Completed</p>
               <p class="body-text" data-i18n="rs2.text">Literature review of the crystal structures and physical properties of A<sub>2</sub>Mo<sub>3</sub>O<sub>8</sub> compounds (A = Fe, Mn, Co, Ni), followed by synthesis of polycrystalline Fe<sub>2</sub>Mo<sub>3</sub>O<sub>8</sub> samples and data analysis.</p>
               <p class="note" data-i18n="ew.note">where it began</p>
-              <p class="folio">9</p>
+              <p class="folio">11</p>
             </div>
           </section>
           <section class="face back paper chapter paper-page" data-page="publications" aria-label="Chapter III · Publications" data-i18n-attr="aria-label:ch3.label">
@@ -404,12 +451,12 @@
                 <a class="doi" href="https://doi.org/10.1016/j.corsci.2026.114277" target="_blank" rel="noopener">doi:10.1016/j.corsci.2026.114277 ↗</a>
               </article>
               <p class="note" data-i18n="ch3.note">the first one</p>
-              <p class="folio">10</p>
+              <p class="folio">12</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 8: how to cite / chapter IV map -->
+        <!-- leaf 9: how to cite / chapter IV map -->
         <div class="leaf page">
           <section class="face front paper cite-page" data-page="cite" aria-label="How to cite" data-i18n-attr="aria-label:ci.title">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -433,7 +480,7 @@
                 <li><b>Q1</b><span>JCR</span></li>
                 <li><b>Top</b><span data-i18n="ci.h3">CAS Zone 1</span></li>
               </ul>
-              <p class="folio">11</p>
+              <p class="folio">13</p>
             </div>
           </section>
           <section class="face back paper chapter map-page" data-page="timeline" aria-label="Chapter IV · Timeline" data-i18n-attr="aria-label:ch4.label">
@@ -461,12 +508,12 @@
                 </svg>
                 <figcaption data-i18n="ch4.cap">Map I — From Wuhan to Shanghai, along the Yangtze</figcaption>
               </figure>
-              <p class="folio">12</p>
+              <p class="folio">14</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 9: year by year / chapter V experimental -->
+        <!-- leaf 10: year by year / chapter V experimental -->
         <div class="leaf page">
           <section class="face front paper years-page" data-page="years" aria-label="Year by year" data-i18n-attr="aria-label:yr.title">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -480,7 +527,7 @@
                 <li data-year="2023" tabindex="0"><b>2023</b><div><h3 data-i18n="tl.23.h">Undergraduate research</h3><p data-i18n="tl.23.t">Synthesis of polycrystalline Fe<sub>2</sub>Mo<sub>3</sub>O<sub>8</sub> in Prof. Chengliang Lu's group, HUST.</p></div></li>
                 <li data-year="2020" tabindex="0"><b>2020</b><div><h3 data-i18n="tl.20.h">B.S. program</h3><p data-i18n="tl.20.t">Began the B.S. program in Applied Physics at Huazhong University of Science and Technology.</p></div></li>
               </ol>
-              <p class="folio">13</p>
+              <p class="folio">15</p>
             </div>
           </section>
           <section class="face back paper chapter sky-page" data-page="methods" aria-label="Chapter V · Methods and tools" data-i18n-attr="aria-label:ch5.label">
@@ -506,12 +553,12 @@
                 </svg>
               </figure>
               <p class="chart-info" aria-live="polite" data-i18n="mt.idle">Touch a star.</p>
-              <p class="folio">14</p>
+              <p class="folio">16</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 10: computational / letters -->
+        <!-- leaf 11: computational / letters -->
         <div class="leaf page">
           <section class="face front paper sky-page" data-page="tools" aria-label="Computational tools" data-i18n-attr="aria-label:mt.comp">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -533,7 +580,7 @@
                 </svg>
               </figure>
               <p class="chart-info" aria-live="polite" data-i18n="mt.idle">Touch a star.</p>
-              <p class="folio">15</p>
+              <p class="folio">17</p>
             </div>
           </section>
           <section class="face back paper chapter letters-page" data-page="letters" aria-label="Letters" data-i18n-attr="aria-label:lt.title">
@@ -548,12 +595,12 @@
                 <button class="seal-btn" id="seal" type="button" aria-label="Break the seal and read the letter" data-i18n-attr="aria-label:lt.hint"></button>
               </div>
               <p class="lt-hint" data-i18n="lt.hint">Break the seal to read the letter</p>
-              <p class="folio">16</p>
+              <p class="folio">18</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 11: the letter / the end -->
+        <!-- leaf 12: the letter / the end -->
         <div class="leaf page">
           <section class="face front paper letter-page" data-page="letter" aria-label="The letter" data-i18n-attr="aria-label:lt.letter">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
@@ -569,7 +616,7 @@
                 <p class="sign" data-i18n="lt.sign">Yours, Jay Ma</p>
               </div>
               <button type="button" class="folded" data-i18n="lt.folded">Sealed — break the seal on the envelope to read</button>
-              <p class="folio">17</p>
+              <p class="folio">19</p>
             </div>
           </section>
           <section class="face back paper finis" data-page="the-end" aria-label="The End" data-i18n-attr="aria-label:fn.title">
@@ -580,12 +627,12 @@
               <svg class="rule" viewBox="-150 -12 300 24" aria-hidden="true"><use href="#o-divider" fill="url(#g-ink) #86663a" stroke="url(#g-ink) #86663a"/></svg>
               <p class="end-text" data-i18n="fn.text">Set in Cinzel, EB Garamond and LXGW WenKai. Every ornament is drawn in code: Middle Eastern geometry and astronomy, European laurel and acanthus.</p>
               <p class="finis-actions"><button type="button" class="text-btn" data-go="end" data-i18n="fn.close">Close the book</button><button type="button" class="text-btn" data-replay data-i18n="fn.replay">Return it to its case</button></p>
-              <p class="folio">18</p>
+              <p class="folio">20</p>
             </div>
           </section>
         </div>
 
-        <!-- leaf 12: star atlas / back cover -->
+        <!-- leaf 13: star atlas / back cover -->
         <div class="leaf cover back-cover">
           <div class="face front cover-inside" data-page="night-sky-2" data-minor><div class="endpaper"><svg viewBox="0 0 300 414" aria-hidden="true"><use href="#art-atlas"/></svg></div></div>
           <div class="face back cover-front" data-page="back-cover"><svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="back"></svg><i class="sheen" aria-hidden="true"></i></div>

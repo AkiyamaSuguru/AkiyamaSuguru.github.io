@@ -1,4 +1,9 @@
-/* Chinese strings. Keys match the data-i18n / data-i18n-attr keys in index.html.
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+/* The book's Chinese text: content, all rights reserved, not open source; no use in any form
+   without permission (see NOTICE.md).
+
+   Chinese strings. Keys match the data-i18n / data-i18n-attr keys in index.html.
    English lives in index.html itself, so editing English means editing the page,
    and editing Chinese means editing this file. Values may contain inline HTML. */
 export default {
@@ -98,8 +103,7 @@ export default {
   'pl3.desc': '这本书本身也是一个开源项目：一个装订成书的个人主页，无需构建，每一处纹样都由代码绘制。',
   'pl3.c1': '中英双语，每一页都有自己的网址',
   'pl3.c2': '可以拖动翻页，带阴影与合成音效',
-  'pl3.c3': '代码采用 GNU AGPL-3.0：修改后的版本（包括作为网站运行）也必须公开源代码',
-  'pl3.c4': '徽标与所有图标设计保留版权，禁止商用',
+  'pl3.c3': '代码采用 GNU AGPL-3.0；设计与内容保留所有权利',
   'pl3.note': '你正拿着它',
   'bd.title': '本书的装订',
   'bd.a': '书匣：弹簧、光与金尘',
@@ -109,6 +113,27 @@ export default {
   'bd.e': '英文写在页面里，中文写在旁边',
   'bd.f': '星空与纸声，都是合成的',
   'bd.foot': '欢迎复刻、修改代码，并以同样的方式分享。',
+  'lc.title': '开源范围',
+  'lc.lead': '本书只开源代码，采用 Copyleft 许可证 <span class="nobr">GNU AGPL-3.0</span>：可以使用、研究、修改与分享；修改后的版本即使只作为网站运行，也须以同一许可证公开全部源代码。',
+  'lc.a': '页面标记，不含其中的文字与图标',
+  'lc.b': '样式，不含其中嵌入的图标',
+  'lc.c': '阅读器、翻页卷曲与书匣',
+  'lc.d': '星空、音效与音乐播放',
+  'lc.e': '页面交互、动效与双语切换',
+  'lc.foot': '保留版权与许可声明，并注明修改之处。',
+  'lc.note': '自由，而非免费',
+  'rv.title': '保留范围',
+  'rv.lead': '除代码以外的一切均归作者所有：不开源，也不适用任何许可。',
+  'rv.at': '个人信息',
+  'rv.a': '姓名、经历、研究、论文与书信',
+  'rv.bt': '设计',
+  'rv.b': '徽标、图标、纹饰、封面、书匣与全部插图，包括由代码绘制的部分',
+  'rv.ct': '文字与音乐',
+  'rv.c': '中英文全部文字，以及背景音乐',
+  'rv.stamp': '保留所有权利',
+  'rv.ban': '未经作者书面许可，禁止以任何形式使用。',
+  'rv.fair': '个人学习、研究，以及注明出处的适当引用，属于法律允许的合理使用，无需许可；超出此范围，须事先取得许可。',
+  'rv.note': '请合理使用',
 
   /* chapter II: research */
   'ch2.label': '第二章 · 研究',

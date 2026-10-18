@@ -1,5 +1,10 @@
+/* SPDX-FileCopyrightText: 2026 Jay Ma
+   SPDX-License-Identifier: AGPL-3.0-only AND LicenseRef-All-Rights-Reserved
+   The styles are open source (AGPL-3.0-only). The icons embedded in this file (the eight-point
+   stars drawn in SVG) are design and reserved, with no use in any form without permission:
+   see NOTICE.md. */
 /* =========================================================
-   A Researcher's Journal · Jay Ma
+   The Book of Star Trails · Jay Ma
    1. tokens and textures   4. the book and its pages
    2. scene                 5. interface
    3. the case              6. language, small screens, motion
@@ -380,6 +385,19 @@ html{-webkit-tap-highlight-color:transparent}
 .legend b{margin-right:1.6cqw;font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-weight:400;font-size:2.35cqw;color:var(--ink)}
 .legend span{color:var(--sepia)}
 .bd-foot{margin-top:auto;margin-bottom:2.6cqh;font-style:italic;font-size:3cqw;color:var(--sepia)}
+/* what is open, what is reserved */
+.terms .body-text{margin-top:.2cqh;font-size:3.05cqw;line-height:1.48}
+.terms .nobr{white-space:nowrap}
+.terms .legend{margin-top:1.1cqh}
+.terms .legend div{padding:.75cqh 0}
+.terms .bd-foot{margin-bottom:.4cqh;line-height:1.4}
+.terms .plate-link{margin:.4cqh 0 2.2cqh}
+.terms .note{right:2cqw;top:auto;bottom:15.5cqh;transform:rotate(-5deg)}
+.reserved .legend b{display:block;margin:0 0 .25cqh;font-family:var(--f-title);font-weight:600;font-size:2.75cqw;letter-spacing:.05em}
+.reserved .stamp{margin-top:1.7cqh}
+.rv-ban{margin-top:1.1cqh;font-style:italic;font-size:3cqw;line-height:1.4;color:var(--ink)}
+:lang(zh) .reserved .legend b{font-family:var(--f-zh-title);letter-spacing:.12em}
+:lang(zh) .rv-ban{font-family:'LXGW WenKai','EB Garamond',serif;font-style:normal}
 
 /* research */
 .thesis-kicker{margin-top:.9cqh;font-family:var(--f-title);font-size:2.4cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--sepia)}

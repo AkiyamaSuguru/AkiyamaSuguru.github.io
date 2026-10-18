@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+// Design: all rights reserved, not open source; no use in any form without permission (see NOTICE.md).
 /* Ornament library: builds the inline SVG sprite and the artwork for the case, covers,
    endpapers, page frames and figures.
    Two traditions meet here. From the Middle East: eight-point star lattices, geometric

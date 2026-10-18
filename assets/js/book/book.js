@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* The book. Until the case opens it is a closed volume lying in its case, in 3D. flatten() then
    hands it to the reader, which is flat, like an e-book:
    - spread: two pages side by side. Positions run from 0 (closed, front cover) to N (closed, back

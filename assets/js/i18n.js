@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* Bilingual text (English / Chinese).
    - English is read from the page once at start-up; Chinese comes from locales/zh.js.
    - <el data-i18n="key"> swaps innerHTML; data-i18n-attr="aria-label:key;alt:key" swaps attributes.

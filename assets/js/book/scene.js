@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* The night sky behind the case: soft twinkling stars with a little parallax, faint
    constellations, the odd shooting star, and drifting gold dust (bursts when the case opens).
    Drawn cheaply: stars are tiny squares batched by colour, glows are one pre-drawn sprite, and

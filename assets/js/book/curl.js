@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jay Ma
+// SPDX-License-Identifier: AGPL-3.0-only
 /* Page curl: the construction e-book readers use for their "realistic" page turn. The lifted
    corner rolls the paper over along two quadratic curves, the folded-back flap shows the other
    side, and the page beneath shows through where the sheet has lifted away.

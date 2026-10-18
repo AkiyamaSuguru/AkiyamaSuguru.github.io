@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <!-- The emblem of Jay Ma, drawn by assets/js/book/emblem.js.
-     Copyright (C) 2026 Jay Ma. All rights reserved. Commercial use is prohibited.
-     Not covered by the GNU AGPL-3.0 that licenses the code; see LICENSE. -->
+     SPDX-FileCopyrightText: 2026 Jay Ma
+     SPDX-License-Identifier: LicenseRef-All-Rights-Reserved
+     All rights reserved: no use in any form without permission. Not covered by the GNU AGPL-3.0
+     that licenses the code; see NOTICE.md. -->
 <defs><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2c8"/><stop offset=".45" stop-color="#e2bf74"/><stop offset="1" stop-color="#a87f3c"/></linearGradient><radialGradient id="cloth" cx=".42" cy=".3" r="1"><stop offset="0" stop-color="#2c3a68"/><stop offset=".6" stop-color="#1a2340"/><stop offset="1" stop-color="#10172b"/></radialGradient></defs>
 <rect width="64" height="64" rx="13" fill="url(#cloth)"/>
 <rect x="2.6" y="2.6" width="58.8" height="58.8" rx="10.6" fill="none" stroke="url(#gold)" stroke-width="1.3"/>
