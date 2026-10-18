@@ -6,19 +6,30 @@ import zh from './locales/zh.js';
 
 /* English for strings that only JavaScript shows (everything else is read from the DOM). */
 const en = {
-  'meta.title': 'Jay Ma',
+  'meta.title': 'Jay Ma · The Book of Star Trails',
   'meta.desc': 'Jay Ma builds open-source tools for materials characterization data and researches SiC coatings for molten salt reactors (M.S., Shanghai University and SINAP, CAS).',
-  'nav.close': 'Close menu',
-  'rs.info.ion': '<b>Ion irradiation</b>Ions stand in for in-reactor radiation damage. SRIM gives the ion range and displacement damage (dpa) profile used to set the irradiation parameters.',
+  'ui.copied': 'Copied',
+  'ui.cover': 'Cover',
+  'ui.backcover': 'Back cover',
+  'rs.info.ion': '<b>Ion irradiation</b>Ions stand in for in-reactor radiation damage. SRIM gives the ion range and displacement damage (dpa) used to set the irradiation parameters.',
   'rs.info.salt': '<b>Molten salt</b>The reactor coolant. Static corrosion tests show how the salt attacks the coating and which coating structure resists it best.',
   'rs.info.sic': '<b>CVD-SiC coating</b>Deposited by chemical vapour deposition at different temperatures; crystallinity and Si/C stoichiometry govern its resistance to molten salt.',
   'rs.info.graphite': '<b>Nuclear graphite</b>The substrate. The coating keeps molten salt out of the porous graphite.',
-  'js.copied': 'Copied to clipboard',
-  'js.copyFail': 'Copy failed. Please select the text manually.',
+  'mt.d.sem': 'Morphology · composition',
+  'mt.d.xrd': 'Crystal structure',
+  'mt.d.raman': 'Bonding · disorder',
+  'mt.d.xps': 'Surface chemistry',
+  'mt.d.corr': 'Static molten-salt corrosion tests',
+  'mt.d.cvd': 'CVD processes: SiC deposited at different temperatures',
+  'mt.d.irr': 'Ion irradiation, with SRIM setting the parameters',
+  'mt.d.py': 'NumPy · Pandas · xarray',
+  'mt.d.plot': 'Matplotlib · Plotly',
+  'mt.d.flet': 'Cross-platform apps',
+  'mt.d.srim': 'Ion range · dpa',
+  'mt.d.matlab': 'Numerical computing',
+  'mt.d.latex': 'Typesetting papers',
   'js.toEn': 'Switch to English',
-  'js.toZh': '切换到中文',
-  'js.updated': 'Updated',
-  'js.latest': 'latest commit',
+  'js.toZh': 'Switch to Chinese',
 };
 const dicts = {en, zh};
 const root = document.documentElement;
@@ -52,10 +63,8 @@ function apply() {
   document.title = t('meta.title');
   document.querySelector('meta[name=description]')?.setAttribute('content', t('meta.desc'));
 
-  const next = lang === 'zh' ? 'js.toEn' : 'js.toZh';
-  document.querySelectorAll('[data-lang-toggle]').forEach(b => {
-    b.setAttribute('aria-label', dicts[lang === 'zh' ? 'en' : 'zh'][next] ?? en[next]);
-  });
+  const next = t(lang === 'zh' ? 'js.toEn' : 'js.toZh');
+  document.querySelectorAll('[data-lang-toggle]').forEach(b => b.setAttribute('aria-label', next));
   listeners.forEach(fn => fn(lang));
 }
 
