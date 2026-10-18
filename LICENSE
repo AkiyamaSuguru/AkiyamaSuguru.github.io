@@ -12,8 +12,8 @@ NOT COVERED BY THIS LICENSE
 
 1. The emblem and all icon designs: the author's emblem (an "M" above two star
    trails) in every form and variant, including the ex libris, the cameo, the
-   wax seal and the back-cover emblem; the icon files assets/img/emblem.svg,
-   assets/img/favicon.png and assets/img/apple-touch-icon.png; and
+   wax seal and the back-cover emblem; the image files in assets/img/
+   (emblem.svg, favicon.png, apple-touch-icon.png and social.jpg); and
    assets/js/book/emblem.js, the file that draws the emblem.
    Copyright (C) 2026 Jay Ma. All rights reserved. Commercial use is prohibited.
 
@@ -33,8 +33,8 @@ with your own.
 以下内容不在本许可范围内：
 
 1. 徽标与所有图标设计：作者徽标（两道星轨之上的 “M”）的一切形式与变体，
-   包括藏书票、肖像章、火漆印与封底徽标；图标文件 assets/img/emblem.svg、
-   assets/img/favicon.png、assets/img/apple-touch-icon.png；以及绘制徽标的
+   包括藏书票、肖像章、火漆印与封底徽标；assets/img/ 中的图片文件
+   （emblem.svg、favicon.png、apple-touch-icon.png、social.jpg）；以及绘制徽标的
    assets/js/book/emblem.js。
    版权所有 (C) 2026 Jay Ma，保留一切权利，禁止商用。
 

@@ -237,7 +237,8 @@ export function createBook({sound, still}) {
   prevBtn.addEventListener('click', () => nudge(-1));
   nextBtn.addEventListener('click', () => nudge(1));
   addEventListener('keydown', e => {
-    if (!active || e.metaKey || e.ctrlKey || e.altKey) return;
+    /* leave keys alone when something on the page has used them (the citation tabs use the arrows) */
+    if (!active || e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || e.target.closest?.('[role=tab], input, textarea, select, [contenteditable]')) return;
     const k = e.key;
     if (k === 'ArrowRight' || k === 'PageDown') { e.preventDefault(); nudge(1); }
     else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); nudge(-1); }

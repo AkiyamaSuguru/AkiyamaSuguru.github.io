@@ -17,7 +17,19 @@ export function initPages({book, sound, onReplay}) {
 }
 
 async function copy(btn, text) {
-  try { await navigator.clipboard.writeText(text); } catch {}
+  let ok = false;
+  try { await navigator.clipboard.writeText(text); ok = true; } catch {
+    /* no clipboard API, or it refused: copy through a hidden text box instead */
+    const box = Object.assign(document.createElement('textarea'), {value: text, readOnly: true});
+    box.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+    document.body.append(box);
+    box.focus({preventScroll: true});
+    box.select();
+    try { ok = document.execCommand('copy'); } catch {}
+    box.remove();
+    btn.focus({preventScroll: true});
+  }
+  if (!ok) return;
   btn.classList.add('done');
   btn.textContent = t('ui.copied');
   clearTimeout(btn._t);

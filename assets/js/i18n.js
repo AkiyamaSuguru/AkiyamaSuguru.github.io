@@ -74,7 +74,8 @@ export function setLang(next) {
   try { localStorage.setItem('lang', lang); } catch {}
   const url = new URL(location.href);
   if (url.searchParams.has('lang')) { url.searchParams.set('lang', lang); history.replaceState(null, '', url); }
-  if (document.startViewTransition && !reduce) document.startViewTransition(apply);
+  /* a transition cut short (a second switch, a hidden tab) still applies the language; only its animation is dropped */
+  if (document.startViewTransition && !reduce) document.startViewTransition(apply).ready.catch(() => {});
   else apply();
 }
 

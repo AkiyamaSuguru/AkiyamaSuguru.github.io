@@ -36,7 +36,7 @@ Page addresses, in order: `cover` `title` `contents` `preface` `about` `open-sou
 | `assets/js/book/xps.js` | The XPS spectrum drawn on the OpenXPSAnalyzer plate |
 | `assets/js/i18n.js` | Language switch: reads English from the page, swaps in Chinese, remembers the choice |
 | `assets/js/locales/zh.js` | **All Chinese text**, keyed like the `data-i18n` attributes in `index.html` |
-| `assets/img/emblem.svg`, `favicon.png`, `apple-touch-icon.png` | Tab and home-screen icons. **Reserved, not open source** |
+| `assets/img/emblem.svg`, `favicon.png`, `apple-touch-icon.png`, `social.jpg` | Tab, home-screen and link-preview images. **Reserved, not open source** |
 | `LICENSE` | What is open source and what is not, followed by the GNU AGPL-3.0 |
 
 ## Editing text
@@ -70,7 +70,7 @@ Every push to `main` goes live about a minute later.
 **Only the code is open source.**
 
 - **Code** (HTML, CSS, JavaScript): [GNU AGPL-3.0](LICENSE). You may use, change and share it. If you share a changed version, or run it as a website, you must offer its source under the same license.
-- **Not open source: the emblem and all icon designs.** The author's emblem (an "M" above two star trails) in every form, including the ex libris, cameo, wax seal and back-cover emblem; the icon files `assets/img/emblem.svg`, `favicon.png` and `apple-touch-icon.png`; and `assets/js/book/emblem.js`, which draws the emblem. © 2026 Jay Ma. All rights reserved. **Commercial use is prohibited.**
+- **Not open source: the emblem and all icon designs.** The author's emblem (an "M" above two star trails) in every form, including the ex libris, cameo, wax seal and back-cover emblem; the image files in `assets/img/` (`emblem.svg`, `favicon.png`, `apple-touch-icon.png`, `social.jpg`); and `assets/js/book/emblem.js`, which draws the emblem. © 2026 Jay Ma. All rights reserved. **Commercial use is prohibited.**
 - **Not open source: the personal content.** The text about the author and the author's research, publications and letters. © 2026 Jay Ma. All rights reserved.
 
 If you build on this code, replace the emblem, the icons and the personal content with your own.
@@ -80,7 +80,7 @@ If you build on this code, replace the emblem, the icons and the personal conten
 **本项目只开源代码部分。**
 
 - **代码**（HTML、CSS、JavaScript）采用 [GNU AGPL-3.0](LICENSE)：可以使用、修改和分享；分享修改后的版本或将其作为网站运行时，必须以同一许可公开源代码。
-- **徽标与所有图标设计不开源**：作者徽标（两道星轨之上的 “M”）的一切形式，包括藏书票、肖像章、火漆印与封底徽标；图标文件 `assets/img/emblem.svg`、`favicon.png`、`apple-touch-icon.png`；以及绘制徽标的 `assets/js/book/emblem.js`。© 2026 Jay Ma，保留所有权利，**禁止商用**。
+- **徽标与所有图标设计不开源**：作者徽标（两道星轨之上的 “M”）的一切形式，包括藏书票、肖像章、火漆印与封底徽标；`assets/img/` 中的图片文件（`emblem.svg`、`favicon.png`、`apple-touch-icon.png`、`social.jpg`）；以及绘制徽标的 `assets/js/book/emblem.js`。© 2026 Jay Ma，保留所有权利，**禁止商用**。
 - **个人内容不开源**：关于作者及其研究、论文与书信的文字。© 2026 Jay Ma，保留所有权利。
 
 基于本项目开发时，请将徽标、图标与个人内容替换为你自己的。
