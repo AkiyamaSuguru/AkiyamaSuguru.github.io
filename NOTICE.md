@@ -3,7 +3,7 @@
 **The Book of Star Trails**, the homepage of Jie Ma: https://akiyamasuguru.github.io/
 Copyright © 2026 Jie Ma (AkiyamaSuguru)
 
-**Only the code is open source.** Everything else belongs to the author, with all rights reserved: the personal information, the design (the emblem, the icons and every other design element) and the content.
+**Only the code is open source.** Everything else belongs to the author, with all rights reserved: the personal information, the design (the emblem, the icons and every other design element) and the content. The fonts are other people's work under their own open license (section 5).
 
 [中文版本见下方](#声明本项目的开源范围与保留权利)
 
@@ -51,6 +51,10 @@ Replace everything reserved with your own, or leave it out:
 
 To ask for permission, write to the author at the address on the book's letter page (https://akiyamasuguru.github.io/#letter), or through GitHub (@AkiyamaSuguru).
 
+## 5. Third-party fonts
+
+The fonts in `assets/fonts/` are not the author's work. They are neither covered by the AGPL nor reserved: each is licensed by its own authors under the **SIL Open Font License 1.1**, and its copyright notice and license come with it (`OFL.txt` in each font's folder; sources and details in `assets/fonts/README.md`). The reservation of text and data mining does not extend to them.
+
 ---
 
 # 声明：本项目的开源范围与保留权利
@@ -58,7 +62,7 @@ To ask for permission, write to the author at the address on the book's letter p
 **星轨之书**（The Book of Star Trails），Jie Ma 的个人主页：https://akiyamasuguru.github.io/
 版权所有 © 2026 Jie Ma (AkiyamaSuguru)
 
-**本项目只开源代码**。除代码以外的一切均归作者所有，保留所有权利：个人信息、设计（徽标、图标及其他一切设计元素）以及内容。
+**本项目只开源代码**。除代码以外的一切均归作者所有，保留所有权利：个人信息、设计（徽标、图标及其他一切设计元素）以及内容。字体是他人的作品，适用其各自的开放许可（见第五节）。
 
 ## 一、代码：以 GNU AGPL-3.0 开源
 
@@ -103,3 +107,7 @@ AGPL 是强 Copyleft（具有“传染性”）的许可证：分享修改后的
 - 换上你自己的图片与音乐。
 
 如需许可，请通过书中书信页上的地址（<https://akiyamasuguru.github.io/#letter>）或 GitHub（@AkiyamaSuguru）联系作者。
+
+## 五、第三方字体
+
+`assets/fonts/` 中的字体不是作者的作品，既不适用 AGPL，也不属于保留内容：它们各自由原作者以 **SIL 开放字体许可证 1.1** 授权，版权声明与许可证随附在各字体文件夹的 `OFL.txt` 中（来源与详情见 `assets/fonts/README.md`）。上文对文本与数据挖掘的保留不适用于这些字体。

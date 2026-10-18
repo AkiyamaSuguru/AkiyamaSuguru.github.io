@@ -84,6 +84,8 @@ html{-webkit-tap-highlight-color:transparent}
 .stage,.ui{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .stage svg{-webkit-user-drag:none}
 .case *:not(.latch):not(.latch *),.at-case .book,.at-case .book *,.opening .book,.opening .book *{pointer-events:none}
+/* shut in the closed case the book cannot be seen; left drawn, it showed through the case's back */
+.at-case .book{visibility:hidden}
 .latch,.latch *{pointer-events:auto}
 .at-case .stage{cursor:grab;touch-action:none}
 .turning-case .stage{cursor:grabbing}
@@ -116,7 +118,12 @@ html{-webkit-tap-highlight-color:transparent}
 .case-back-out svg{position:absolute;inset:0;width:100%;height:100%;display:block;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
 .top-out::after,.bottom-out::after,.left-out::after,.right-out::after,.case-back-out::after{content:"";position:absolute;inset:0;background:#000;pointer-events:none}
 .top-out::after{opacity:var(--sh-top,0)}.bottom-out::after{opacity:var(--sh-bottom,0)}.left-out::after{opacity:var(--sh-left,0)}
-.right-out::after{opacity:var(--sh-right,0)}.case-back-out::after{opacity:var(--sh-back,0)}
+.right-out::after{opacity:var(--sh-right,0)}.case-back-out::after{z-index:2;opacity:calc(var(--sh-back,0)*.65)}
+/* the back catches the light like the doors: the same slow sheen, and a glint that follows the turn */
+.case-back-out::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(70% 55% at var(--glint-x,38%) var(--glint-y,12%),rgba(255,232,190,var(--glint,0)),transparent 74%)}
+.case-back-out .glint{position:absolute;top:0;bottom:0;left:-100%;width:300%;z-index:1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,236,190,.10) 48%,transparent 56%);animation:sweep 9s ease-in-out infinite 4.5s}
 .left-in{left:0;top:0;width:var(--CD);height:100%;transform-origin:left;transform:rotateY(90deg);background:var(--velvet);filter:brightness(.8)}
 .right-in{right:0;top:0;width:var(--CD);height:100%;transform-origin:right;transform:rotateY(-90deg);background:var(--velvet);filter:brightness(.8)}
 

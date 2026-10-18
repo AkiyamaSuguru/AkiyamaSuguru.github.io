@@ -79,6 +79,7 @@ soundBtn.addEventListener('click', () => { sound.on = !sound.on; sound.unlock();
 musicBtn.addEventListener('click', () => { music.on = !music.on; sound.unlock(); syncSound(); });
 document.getElementById('replay').addEventListener('click', replay);
 document.getElementById('contents-btn').addEventListener('click', () => book.go(book.posFor('contents'), {slug: 'contents'}));
+document.getElementById('contact-btn').addEventListener('click', () => book.go(book.posFor('letter'), {slug: 'letter'}));
 addEventListener('keydown', e => {
   if (e.key.toLowerCase() === 'm' && !e.metaKey && !e.ctrlKey && !e.altKey) { sound.on = !sound.on; syncSound(); }
 });

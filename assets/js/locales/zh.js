@@ -269,4 +269,5 @@ export default {
   'js.toZh': '切换到中文',
   'ui.langtip': '切换语言 (L)',
   'ui.music': '音乐',
+  'ui.contact': '联系',
 };

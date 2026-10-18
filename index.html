@@ -34,10 +34,7 @@
   if (lang === 'zh') d.lang = 'zh-CN';
 })();
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/css/book.css">
 <noscript><style>#hint,.intro{display:none}</style></noscript>
 <script type="module" src="assets/js/book/main.js"></script>
@@ -55,7 +52,7 @@
       <!-- ============ the case: two doors meeting at an astrolabe ============ -->
       <div class="case" id="case">
         <div class="case-back"></div>
-        <div class="case-back-out"><svg viewBox="0 0 300 414" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-art="caseback"></svg></div>
+        <div class="case-back-out"><svg viewBox="0 0 300 414" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-art="caseback"></svg><i class="glint" aria-hidden="true"></i></div>
         <div class="case-glow"></div>
         <div class="wall top-in"></div>
         <div class="wall top-out"></div>
@@ -126,17 +123,17 @@
               <h2 class="pg-title" data-i18n="toc.title">Contents</h2>
               <svg class="rule" viewBox="-150 -12 300 24" aria-hidden="true"><use href="#o-divider" fill="url(#g-ink) #86663a" stroke="url(#g-ink) #86663a"/></svg>
               <ol class="toc-list">
-                <li class="front-matter"><a href="#preface"><b>✦</b><span data-i18n="toc.pf">Preface</span><i></i><em>iv</em></a></li>
-                <li class="front-matter"><a href="#about"><b>✦</b><span data-i18n="toc.ab">About the Author</span><i></i><em>v</em></a></li>
-                <li><a href="#open-source"><b>I</b><span data-i18n="toc.c1">Open Source</span><i></i><em>1</em></a></li>
-                <li><a href="#research"><b>II</b><span data-i18n="toc.c2">Research</span><i></i><em>8</em></a></li>
-                <li><a href="#publications"><b>III</b><span data-i18n="toc.c3">Publications</span><i></i><em>12</em></a></li>
-                <li><a href="#timeline"><b>IV</b><span data-i18n="toc.c4">Timeline</span><i></i><em>14</em></a></li>
-                <li><a href="#methods"><b>V</b><span data-i18n="toc.c5">Methods &amp; Tools</span><i></i><em>16</em></a></li>
-                <li><a href="#letters"><b>✉</b><span data-i18n="toc.c6">Letters</span><i></i><em>18</em></a></li>
+                <li class="front-matter"><a href="#preface"><b>✦</b><span data-i18n="toc.pf">Preface</span><i></i><em></em></a></li>
+                <li class="front-matter"><a href="#about"><b>✦</b><span data-i18n="toc.ab">About the Author</span><i></i><em></em></a></li>
+                <li><a href="#open-source"><b>I</b><span data-i18n="toc.c1">Open Source</span><i></i><em></em></a></li>
+                <li><a href="#research"><b>II</b><span data-i18n="toc.c2">Research</span><i></i><em></em></a></li>
+                <li><a href="#publications"><b>III</b><span data-i18n="toc.c3">Publications</span><i></i><em></em></a></li>
+                <li><a href="#timeline"><b>IV</b><span data-i18n="toc.c4">Timeline</span><i></i><em></em></a></li>
+                <li><a href="#methods"><b>V</b><span data-i18n="toc.c5">Methods &amp; Tools</span><i></i><em></em></a></li>
+                <li><a href="#letters"><b>✉</b><span data-i18n="toc.c6">Letters</span><i></i><em></em></a></li>
               </ol>
               <p class="toc-note" data-i18n="toc.note">Turn a page by clicking it, dragging its edge, or with ← and →.</p>
-              <p class="folio">iii</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -154,7 +151,7 @@
                 <p data-i18n="pf.p3">Alongside the research I build open-source Python tools for materials characterization data. This book gathers both: the tools, the experiments, and the path between them.</p>
               </div>
               <p class="sign" data-i18n="pf.sign">— Jie Ma, Shanghai</p>
-              <p class="folio">iv</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper about" data-page="about" aria-label="About the Author" data-i18n-attr="aria-label:ab.title">
@@ -172,18 +169,18 @@
                 <div><dt data-i18n="ab.k.grad">Graduation</dt><dd data-i18n="ab.v.grad">June 2027 (expected)</dd></div>
               </dl>
               <ul class="medals">
-                <li><b>2</b><span data-i18n="ab.h1">Open-source projects</span></li>
+                <li><b>3</b><span data-i18n="ab.h1">Open-source projects</span></li>
                 <li><b>10.3</b><span data-i18n="ab.h2">Impact factor</span></li>
                 <li><b>2027</b><span data-i18n="ab.h3">Expected graduation</span></li>
               </ul>
-              <p class="folio">v</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
 
         <!-- leaf 3: chapter I / plate I -->
         <div class="leaf page">
-          <section class="face front paper chapter" data-page="open-source" aria-label="Chapter I · Open Source" data-i18n-attr="aria-label:ch1.label">
+          <section class="face front paper chapter" data-page="open-source" data-folio-start aria-label="Chapter I · Open Source" data-i18n-attr="aria-label:ch1.label">
             <svg class="art" viewBox="0 0 300 414" aria-hidden="true" data-art="frame"></svg>
             <div class="pg">
               <p class="run-head" data-i18n="ch1.kicker">Chapter I</p>
@@ -196,7 +193,7 @@
               </figure>
               <p class="lead"><span class="initial"><svg viewBox="0 0 100 100" aria-hidden="true" data-art="initial"></svg><b data-i18n="ch1.initial">P</b></span><span data-i18n="ch1.lead">ython tools I build and maintain for turning raw characterization data into analysis and publication figures.</span></p>
               <p class="note" data-i18n="ch1.note">every peak, a star</p>
-              <p class="folio">1</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper plate" data-page="openxpsanalyzer" aria-label="Plate I · OpenXPSAnalyzer">
@@ -223,7 +220,7 @@
               </div>
               <a class="plate-link" href="https://github.com/AkiyamaSuguru/OpenXPSAnalyzer" target="_blank" rel="noopener">GitHub ↗</a>
               <p class="note" data-i18n="pl1.note">exports at 600 dpi</p>
-              <p class="folio">2</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -263,7 +260,7 @@
               </div>
               <a class="plate-link" href="https://github.com/AkiyamaSuguru/opengma" target="_blank" rel="noopener">GitHub ↗</a>
               <p class="note" data-i18n="pl2.note">still growing</p>
-              <p class="folio">3</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper plate book-plate" data-page="star-trails" aria-label="Plate III · The Book of Star Trails" data-i18n-attr="aria-label:pl3.aria">
@@ -290,7 +287,7 @@
               </div>
               <a class="plate-link" href="https://github.com/AkiyamaSuguru/AkiyamaSuguru.github.io" target="_blank" rel="noopener">GitHub ↗</a>
               <p class="note" data-i18n="pl3.note">you are holding it</p>
-              <p class="folio">4</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -312,7 +309,7 @@
                 <div><dt>f</dt><dd><b>scene.js · sound.js</b><span data-i18n="bd.f">stars and paper, both synthesized</span></dd></div>
               </dl>
               <p class="bd-foot" data-i18n="bd.foot">Fork the code, change it, and share it alike.</p>
-              <p class="folio">5</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper terms" data-page="license" aria-label="What Is Open" data-i18n-attr="aria-label:lc.title">
@@ -332,7 +329,7 @@
               <p class="bd-foot" data-i18n="lc.foot">Keep the notices, and mark what you change.</p>
               <a class="plate-link" href="https://github.com/AkiyamaSuguru/AkiyamaSuguru.github.io/blob/main/LICENSE" target="_blank" rel="noopener">LICENSE ↗</a>
               <p class="note" data-i18n="lc.note">free as in freedom</p>
-              <p class="folio">6</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -356,7 +353,7 @@
               <p class="bd-foot" data-i18n="rv.fair">Fair use, as the law allows, needs no permission: study, research, or a brief quotation that names its source. Anything more does.</p>
               <a class="plate-link" href="https://github.com/AkiyamaSuguru/AkiyamaSuguru.github.io/blob/main/NOTICE.md" target="_blank" rel="noopener">NOTICE ↗</a>
               <p class="note" data-i18n="rv.note">please use fairly</p>
-              <p class="folio">7</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper chapter research-open" data-page="research" aria-label="Chapter II · Research" data-i18n-attr="aria-label:ch2.label">
@@ -371,7 +368,7 @@
               <p class="thesis-meta" data-i18n="ch2.meta">Shanghai Institute of Applied Physics, CAS · Advisor: Prof. Hefei Huang</p>
               <p class="stamp" data-i18n="ch2.status">In progress</p>
               <p class="lead"><span class="initial"><svg viewBox="0 0 100 100" aria-hidden="true" data-art="initial"></svg><b data-i18n="ch2.initial">H</b></span><span data-i18n="ch2.lead">ow does a thin ceramic coating keep molten salt out of nuclear graphite? I study CVD-SiC coatings deposited at different temperatures: their structure and stoichiometry, how they corrode in molten salt, and how they respond to ion irradiation.</span></p>
-              <p class="folio">8</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -398,7 +395,7 @@
               </figure>
               <p class="xsec-info" id="xsec-info" aria-live="polite" data-i18n="rs.info.idle">Touch a layer or a label to see what it does.</p>
               <p class="note" data-i18n="px.note">touch a layer</p>
-              <p class="folio">9</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper stages-page" data-page="stages" aria-label="The thesis in three stages" data-i18n-attr="aria-label:st.title">
@@ -412,7 +409,7 @@
                 <li class="live"><p class="ph" data-i18n="rs.p3.ph">03 · In progress</p><h3 data-i18n="rs.p3.h">Irradiation</h3><p data-i18n="rs.p3.t">Ion ranges and displacement damage (dpa) calculated with SRIM and custom Python post-processing to set the irradiation parameters. The irradiation experiments are complete; post-irradiation characterization is in progress.</p></li>
               </ol>
               <p class="tags">CVD-SiC · <span data-i18n="rs.tag.gra">Nuclear graphite</span> · <span data-i18n="rs.tag.pyc">PyC reference</span> · <span data-i18n="rs.tag.salt">Molten salt</span> · SRIM · dpa · <span data-i18n="rs.tag.ion">Ion irradiation</span></p>
-              <p class="folio">10</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -434,7 +431,7 @@
               <p class="stamp done" data-i18n="rs2.status">Completed</p>
               <p class="body-text" data-i18n="rs2.text">Literature review of the crystal structures and physical properties of A<sub>2</sub>Mo<sub>3</sub>O<sub>8</sub> compounds (A = Fe, Mn, Co, Ni), followed by synthesis of polycrystalline Fe<sub>2</sub>Mo<sub>3</sub>O<sub>8</sub> samples and data analysis.</p>
               <p class="note" data-i18n="ew.note">where it began</p>
-              <p class="folio">11</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper chapter paper-page" data-page="publications" aria-label="Chapter III · Publications" data-i18n-attr="aria-label:ch3.label">
@@ -452,7 +449,7 @@
                 <a class="doi" href="https://doi.org/10.1016/j.corsci.2026.114277" target="_blank" rel="noopener">doi:10.1016/j.corsci.2026.114277 ↗</a>
               </article>
               <p class="note" data-i18n="ch3.note">the first one</p>
-              <p class="folio">12</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -481,7 +478,7 @@
                 <li><b>Q1</b><span>JCR</span></li>
                 <li><b>Top</b><span data-i18n="ci.h3">CAS Zone 1</span></li>
               </ul>
-              <p class="folio">13</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper chapter map-page" data-page="timeline" aria-label="Chapter IV · Timeline" data-i18n-attr="aria-label:ch4.label">
@@ -509,7 +506,7 @@
                 </svg>
                 <figcaption data-i18n="ch4.cap">Map I — From Wuhan to Shanghai, along the Yangtze</figcaption>
               </figure>
-              <p class="folio">14</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -528,7 +525,7 @@
                 <li data-year="2023" tabindex="0"><b>2023</b><div><h3 data-i18n="tl.23.h">Undergraduate research</h3><p data-i18n="tl.23.t">Synthesis of polycrystalline Fe<sub>2</sub>Mo<sub>3</sub>O<sub>8</sub> in Prof. Chengliang Lu's group, HUST.</p></div></li>
                 <li data-year="2020" tabindex="0"><b>2020</b><div><h3 data-i18n="tl.20.h">B.S. program</h3><p data-i18n="tl.20.t">Began the B.S. program in Applied Physics at Huazhong University of Science and Technology.</p></div></li>
               </ol>
-              <p class="folio">15</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper chapter sky-page" data-page="methods" aria-label="Chapter V · Methods and tools" data-i18n-attr="aria-label:ch5.label">
@@ -554,7 +551,7 @@
                 </svg>
               </figure>
               <p class="chart-info" aria-live="polite" data-i18n="mt.idle">Touch a star.</p>
-              <p class="folio">16</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -581,7 +578,7 @@
                 </svg>
               </figure>
               <p class="chart-info" aria-live="polite" data-i18n="mt.idle">Touch a star.</p>
-              <p class="folio">17</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper chapter letters-page" data-page="letters" aria-label="Letters" data-i18n-attr="aria-label:lt.title">
@@ -596,7 +593,7 @@
                 <button class="seal-btn" id="seal" type="button" aria-label="Break the seal and read the letter" data-i18n-attr="aria-label:lt.hint"></button>
               </div>
               <p class="lt-hint" data-i18n="lt.hint">Break the seal to read the letter</p>
-              <p class="folio">18</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -617,7 +614,7 @@
                 <p class="sign" data-i18n="lt.sign">Yours, Jie Ma</p>
               </div>
               <button type="button" class="folded" data-i18n="lt.folded">Sealed — break the seal on the envelope to read</button>
-              <p class="folio">19</p>
+              <p class="folio"></p>
             </div>
           </section>
           <section class="face back paper finis" data-page="the-end" aria-label="The End" data-i18n-attr="aria-label:fn.title">
@@ -628,7 +625,7 @@
               <svg class="rule" viewBox="-150 -12 300 24" aria-hidden="true"><use href="#o-divider" fill="url(#g-ink) #86663a" stroke="url(#g-ink) #86663a"/></svg>
               <p class="end-text" data-i18n="fn.text">Set in Cinzel, EB Garamond and LXGW WenKai. Every ornament is drawn in code: Middle Eastern geometry and astronomy, European laurel and acanthus.</p>
               <p class="finis-actions"><button type="button" class="text-btn" data-go="end" data-i18n="fn.close">Close the book</button><button type="button" class="text-btn" data-replay data-i18n="fn.replay">Return it to its case</button></p>
-              <p class="folio">20</p>
+              <p class="folio"></p>
             </div>
           </section>
         </div>
@@ -657,6 +654,9 @@
   <div class="toolbar">
     <button class="tool" id="contents-btn" type="button" aria-label="Contents" data-i18n-attr="aria-label:toc.title" title="T">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg>
+    </button>
+    <button class="tool" id="contact-btn" type="button" aria-label="Contact" data-i18n-attr="aria-label:ui.contact" title="E">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="1.6"/><path d="M4.2 7.2l7.8 5.6 7.8-5.6"/></svg>
     </button>
     <button class="lang" type="button" data-lang-toggle aria-label="Switch to Chinese" title="Language (L)" data-i18n-attr="title:ui.langtip">
       <span class="lang-thumb" aria-hidden="true"></span><span class="lang-opt" data-opt="en">EN</span><span class="lang-opt" data-opt="zh">中</span>

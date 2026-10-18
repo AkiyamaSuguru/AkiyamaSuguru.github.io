@@ -10,7 +10,8 @@ English by default, with a Chinese edition. No build step: plain HTML, CSS and n
 
 - **The case** is an object: drag it (or use the arrow keys) to turn it and look at it from any side. Only the astrolabe's rule at its centre opens it; nothing on it can be selected. **Skip** (or Esc) jumps to the end of the opening.
 - **Turn pages:** drag a page by its corner or edge (it curls under your hand; let go past halfway, or flick, and it turns), click a page, or use the arrow buttons, ← / →, Page Up / Page Down, Home / End. On a computer a corner lifts a little as the mouse comes near.
-- **Keys:** T for contents, L for language, M for sound.
+- **Contact:** the envelope in the toolbar (or E) turns to the letter, where the email address is.
+- **Keys:** T for contents, E for the letter, L for language, M for sound.
 - **Phones and portrait screens** show one page at a time, turned with the same page curl, like an e-book reader.
 - **Music** starts softly after your first click or key; the ♪ button turns it off (and remembers), the sound button mutes everything, and it pauses while the tab is hidden.
 - **Every page has its own address**, and the browser's Back button turns back. For example: https://akiyamasuguru.github.io/#opengma
@@ -41,6 +42,7 @@ Page addresses, in order: `cover` `title` `contents` `preface` `about` `open-sou
 | `assets/js/i18n.js` | Language switch: reads English from the page, swaps in Chinese, remembers the choice | AGPL-3.0 |
 | `assets/js/locales/zh.js` | **All Chinese text**, keyed like the `data-i18n` attributes in `index.html` | **Reserved** |
 | `assets/img/emblem.svg`, `favicon.png`, `apple-touch-icon.png`, `social.jpg` | Tab, home-screen and link-preview images | **Reserved** |
+| `assets/fonts/` | The typefaces, served from the site: Cinzel, Cinzel Decorative, EB Garamond, Noto Serif SC and LXGW WenKai, in slices (about 11 MB in all; a page loads only the slices its characters need) | Third-party, **SIL OFL 1.1**: see `assets/fonts/README.md` |
 | `LICENSE` | The GNU AGPL-3.0, which covers the code | |
 | `NOTICE.md` | Exactly what is open source and what is reserved, in English and Chinese | |
 | `robots.txt` | Search engines welcome; crawlers that gather data for AI training are asked to keep out | |
@@ -57,7 +59,7 @@ Page addresses, in order: `cover` `title` `contents` `preface` `about` `open-sou
 ## Adding or moving pages
 
 Each leaf is a `<div class="leaf page">` holding two `<section class="face … paper" data-page="address">`: the `front` face is a right-hand page, the `back` face the left-hand page after it.
-When you add or remove a leaf, renumber the folios (`<p class="folio">`) and the page numbers in the contents.
+Page numbers are counted when the book loads: roman numerals for the front matter, arabic from the page marked `data-folio-start` (the first chapter), and the contents take the numbers of the pages they point to. Leave each `<p class="folio"></p>` empty; adding or moving a leaf renumbers everything.
 Pages size their type with container units (`cqw`, `cqh`), so check that each page's text still fits inside its frame, in both languages.
 
 ## Language
@@ -79,6 +81,7 @@ GitHub Pages publishes the root of `main` (Settings → Pages → Deploy from a 
 Every push to `main` goes live about a minute later.
 
 The site is entirely static: no build step and no server code, file names are case-sensitive, and GitHub Pages sets its own caching (about ten minutes). The largest file is the music (about 2 MB), which is fetched only after the visitor's first click.
+Nothing is loaded from other sites: the fonts are served from `assets/fonts/`, because Google Fonts and jsDelivr are often unreachable from mainland China.
 
 ## License
 
@@ -90,6 +93,8 @@ The site is entirely static: no build step and no server code, file names are ca
 - **Reserved: content and music.** The title and all the text in both languages (`index.html`, `zh.js`), and the music (`assets/audio/`).
 
 © 2026 Jie Ma. Everything the AGPL does not cover is reserved: **no use in any form** without written permission, commercial or not, including text and data mining and AI training. Fair use that the law allows (personal study, research, or a brief quotation that names its source) needs no permission; please keep within it.
+
+The fonts in `assets/fonts/` belong to their authors and are under the SIL Open Font License 1.1, not the AGPL and not reserved.
 
 If you build on the code, replace everything reserved with your own.
 
@@ -103,5 +108,7 @@ If you build on the code, replace everything reserved with your own.
 - **保留：内容与音乐**。书名与全部中英文文字（`index.html`、`zh.js`），以及背景音乐（`assets/audio/`）。
 
 © 2026 Jie Ma。AGPL 不涵盖的一切均保留所有权利：未经书面许可，**禁止以任何形式使用**，无论商业或非商业用途，包括文本与数据挖掘及 AI 训练。法律允许的合理使用（个人学习、研究，或注明出处的适当引用）无需许可，请遵守这一界限。
+
+`assets/fonts/` 中的字体属于各自的作者，采用 SIL 开放字体许可证 1.1，既不适用 AGPL，也不属于保留内容。
 
 基于本项目的代码开发时，请将所有保留内容替换为你自己的。

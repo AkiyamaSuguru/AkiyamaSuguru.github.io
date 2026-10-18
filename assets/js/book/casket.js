@@ -36,18 +36,26 @@ export function createCase({sound, scene, book, still, onOpened}) {
   /* the light comes from just above and to the left of the viewer, as in an object viewer: whatever
      side faces you is lit, and faces turned edge-on darken */
   const LIGHT = (() => { const v = [-.22, -.32, .92], l = Math.hypot(...v); return v.map(c => c / l); })();
+  /* halfway between the light and the eye: a glossy surface shines brightest where it faces this */
+  const HALF = (() => { const v = [LIGHT[0], LIGHT[1], LIGHT[2] + 1], l = Math.hypot(...v); return v.map(c => c / l); })();
   const FACES = {front: [0, 0, 1], back: [0, 0, -1], left: [-1, 0, 0], right: [1, 0, 0], top: [0, -1, 0], bottom: [0, 1, 0]};
+  const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
   function orient() {
     set(world, '--yaw', yaw.toFixed(2) + 'deg');
     set(world, '--pitch', pitch.toFixed(2) + 'deg');
     const cy = Math.cos(yaw * RAD), sy = Math.sin(yaw * RAD), x = (tilt + pitch) * RAD, cx = Math.cos(x), sx = Math.sin(x);
-    for (const [name, [nx, ny, nz]] of Object.entries(FACES)) {
-      /* rotateY(yaw), then rotateX(tilt + pitch), as CSS applies them */
-      const x1 = nx * cy + nz * sy, z1 = -nx * sy + nz * cy;
-      const y2 = ny * cx - z1 * sx, z2 = ny * sx + z1 * cx;
-      const lit = .38 + .62 * Math.max(0, x1 * LIGHT[0] + y2 * LIGHT[1] + z2 * LIGHT[2]);
+    /* rotateY(yaw), then rotateX(tilt + pitch), as CSS applies them */
+    const turn = ([vx, vy, vz]) => { const x1 = vx * cy + vz * sy, z1 = -vx * sy + vz * cy; return [x1, vy * cx - z1 * sx, vy * sx + z1 * cx]; };
+    for (const [name, n] of Object.entries(FACES)) {
+      const lit = .38 + .62 * Math.max(0, dot(turn(n), LIGHT));
       set(box, '--sh-' + name, ((1 - lit) * .85).toFixed(3));
     }
+    /* on the back, a broad glint slides across the cloth as the case turns, brightest when the back
+       faces the light, as the gold on the doors catches it; the back's own x axis points left */
+    const u = dot(turn([-1, 0, 0]), HALF), v = dot(turn([0, 1, 0]), HALF);
+    set(box, '--glint-x', clamp(50 + u * 110, 8, 92).toFixed(1) + '%');
+    set(box, '--glint-y', clamp(40 + v * 80, 6, 80).toFixed(1) + '%');
+    set(box, '--glint', (.26 * Math.max(0, dot(turn(FACES.back), HALF)) ** 2).toFixed(3));
   }
   const atCase = () => body.classList.contains('at-case') && !opening;
 

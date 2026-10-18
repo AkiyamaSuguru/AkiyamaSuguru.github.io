@@ -22,6 +22,17 @@ export function createBook({sound, still}) {
   /* pages in reading order: leaf i front = page 2i, leaf i back = page 2i + 1 */
   const pages = leaves.flatMap(l => [l.querySelector('.face.front'), l.querySelector('.face.back')]);
   const slugs = pages.map(p => p.dataset.page);
+
+  /* page numbers are counted, not written in: the front matter in roman numerals from the endpaper
+     on, the main text in arabic from the page marked data-folio-start; the contents take the
+     numbers of the pages they point to, so adding or moving a leaf renumbers everything */
+  const roman = n => { let s = ''; for (const [v, r] of [[10, 'x'], [9, 'ix'], [5, 'v'], [4, 'iv'], [1, 'i']]) while (n >= v) { s += r; n -= v; } return s; };
+  const first = Math.max(0, pages.findIndex(p => p.hasAttribute('data-folio-start')));
+  pages.forEach((p, k) => { const f = p.querySelector('.folio'); if (f) f.textContent = k < first ? roman(k) : k - first + 1; });
+  book.querySelectorAll('.toc-list a[href^="#"]').forEach(a => {
+    const k = slugs.indexOf(decodeURIComponent(a.hash.slice(1))), em = a.querySelector('em');
+    if (k >= 0 && em) em.textContent = pages[k].querySelector('.folio')?.textContent ?? '';
+  });
   const order = pages.map((_, k) => k).filter(k => !pages[k].hasAttribute('data-minor'));
   const LB = 1, RB = 2 * N - 2, BACK = 2 * N - 1;   /* the endpapers (inside the boards) and the back cover */
   const prevBtn = document.getElementById('prev'), nextBtn = document.getElementById('next'), indicator = document.getElementById('indicator');
@@ -518,6 +529,7 @@ export function createBook({sound, still}) {
     else if (k === 'Home') go(0);
     else if (k === 'End') go(count() - 1);
     else if (k.toLowerCase() === 't') go(posFor('contents'), {slug: 'contents'});
+    else if (k.toLowerCase() === 'e') go(posFor('letter'), {slug: 'letter'});
   });
   onLangChange(() => { indicator.textContent = indicatorText(); });
 
