@@ -93,12 +93,12 @@ If you build on the code, replace everything reserved with your own.
 
 ### 许可说明
 
-**本项目只开源代码。**除代码以外的一切（个人信息、设计与内容）均保留所有权利。详见 [NOTICE.md](NOTICE.md)；书中的“开源范围”与“保留范围”两页（https://akiyamasuguru.github.io/?lang=zh#license）也有说明。
+**本项目只开源代码**。除代码以外的一切（个人信息、设计与内容）均保留所有权利。详见 [NOTICE.md](NOTICE.md)；书中的“开源范围”与“保留范围”两页（<https://akiyamasuguru.github.io/?lang=zh#license>）也有说明。
 
-- **代码：[GNU AGPL-3.0](LICENSE)（`AGPL-3.0-only`），强 Copyleft 许可证。**页面标记、样式以及驱动本书的脚本（见上方文件表的 Rights 一列）。可以使用、研究、修改与分享；分享修改后的版本，或将其作为网站运行时，必须以同一许可证公开全部源代码，保留声明并注明修改。
-- **保留：个人信息。**作者的姓名、经历、研究、论文、时间线、联系方式与书信。
-- **保留：设计。**徽标的一切形式、所有图标，以及一切纹饰、图案、边框、封面、插图与其他设计元素，无论以何种形式存在，包括由代码绘制或嵌入代码之中的部分（`emblem.js`、`ornaments.js`、`illustrations.js`、`xps.js`、`assets/img/`，以及 `index.html` 与 `book.css` 中的图标）。
-- **保留：内容与音乐。**书名与全部中英文文字（`index.html`、`zh.js`），以及背景音乐（`assets/audio/`）。
+- **代码：[GNU AGPL-3.0](LICENSE)（`AGPL-3.0-only`），强 Copyleft 许可证**。页面标记、样式以及驱动本书的脚本（见上方文件表的 Rights 一列）。可以使用、研究、修改与分享；分享修改后的版本，或将其作为网站运行时，必须以同一许可证公开全部源代码，保留声明并注明修改。
+- **保留：个人信息**。作者的姓名、经历、研究、论文、时间线、联系方式与书信。
+- **保留：设计**。徽标的一切形式、所有图标，以及一切纹饰、图案、边框、封面、插图与其他设计元素，无论以何种形式存在，包括由代码绘制或嵌入代码之中的部分（`emblem.js`、`ornaments.js`、`illustrations.js`、`xps.js`、`assets/img/`，以及 `index.html` 与 `book.css` 中的图标）。
+- **保留：内容与音乐**。书名与全部中英文文字（`index.html`、`zh.js`），以及背景音乐（`assets/audio/`）。
 
 © 2026 Jay Ma。AGPL 不涵盖的一切均保留所有权利：未经书面许可，**禁止以任何形式使用**，无论商业或非商业用途，包括文本与数据挖掘及 AI 训练。法律允许的合理使用（个人学习、研究，或注明出处的适当引用）无需许可，请遵守这一界限。
 

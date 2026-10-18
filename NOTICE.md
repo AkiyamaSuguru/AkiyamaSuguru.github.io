@@ -35,7 +35,7 @@ These files are reserved in full: everything in `assets/img/` and `assets/audio/
 
 **No use of any kind is permitted without the author's prior written permission**, whether commercial or non-commercial. In particular, you may not copy, reproduce, download for reuse, modify, adapt, translate, redistribute, publish, display or perform them elsewhere, include them in other works or products, use them as a logo or mark, or use them for text and data mining or to train machine-learning models.
 
-Viewing them on the website, and viewing or forking this public repository on GitHub as GitHub's Terms of Service allow, give no other rights.
+Viewing them on the website, and viewing or forking this public repository on GitHub as GitHub's Terms of Service allow, give no other rights. Keeping the copyright and license notices that the AGPL requires, which name the author, needs no permission.
 
 ## 3. Fair use
 
@@ -58,7 +58,7 @@ To ask for permission, write to the author at the address on the book's letter p
 **星轨之书**（The Book of Star Trails），Jay Ma 的个人主页：https://akiyamasuguru.github.io/
 版权所有 © 2026 Jay Ma (AkiyamaSuguru)
 
-**本项目只开源代码。**除代码以外的一切均归作者所有，保留所有权利：个人信息、设计（徽标、图标及其他一切设计元素）以及内容。
+**本项目只开源代码**。除代码以外的一切均归作者所有，保留所有权利：个人信息、设计（徽标、图标及其他一切设计元素）以及内容。
 
 ## 一、代码：以 GNU AGPL-3.0 开源
 
@@ -79,16 +79,16 @@ AGPL 是强 Copyleft（具有“传染性”）的许可证：分享修改后的
 
 以下内容**不适用** AGPL，也不适用任何其他许可。版权所有 © 2026 Jay Ma，保留所有权利。
 
-1. **个人信息：**作者的姓名、简介、教育经历、研究、学位论文、论文、时间线、联系方式与书信，以及书中提及的其他人的姓名与信息。
-2. **设计：**作者徽标的一切形式与变体（包括藏书票、肖像章、火漆印与封底徽标）；所有图标；以及纹饰、图案、边框、封面、环衬、书匣及其内衬、印章、首字母饰、插图、图表、地图、星图和其他一切插图与设计元素。无论以何种形式存在（图片文件、SVG，或由代码绘制、嵌入代码之中），无论出现在何处（包括 `index.html` 中的内联图标与 `book.css` 中嵌入的图像），均在此列。
-3. **内容：**书名以及书中全部中英文文字。
-4. **音乐：**《A Memory Among the Stars》及其音频文件。
+1. **个人信息**：作者的姓名、简介、教育经历、研究、学位论文、论文、时间线、联系方式与书信，以及书中提及的其他人的姓名与信息。
+2. **设计**：作者徽标的一切形式与变体（包括藏书票、肖像章、火漆印与封底徽标）；所有图标；以及纹饰、图案、边框、封面、环衬、书匣及其内衬、印章、首字母饰、插图、图表、地图、星图和其他一切插图与设计元素。无论以何种形式存在（图片文件、SVG，或由代码绘制、嵌入代码之中），无论出现在何处（包括 `index.html` 中的内联图标与 `book.css` 中嵌入的图像），均在此列。
+3. **内容**：书名以及书中全部中英文文字。
+4. **音乐**：《A Memory Among the Stars》及其音频文件。
 
 以下文件整体保留：`assets/img/` 与 `assets/audio/` 中的全部文件，以及 `assets/js/book/emblem.js`、`assets/js/book/ornaments.js`、`assets/js/book/illustrations.js`、`assets/js/book/xps.js` 与 `assets/js/locales/zh.js`。它们标为 `LicenseRef-All-Rights-Reserved`。
 
 **未经作者事先书面许可，禁止以任何形式使用**，无论商业或非商业用途。尤其不得复制、转载、为再利用而下载、修改、改编、翻译、再分发、发布，不得在别处展示或表演，不得收入其他作品或产品，不得用作标志或标识，也不得用于文本与数据挖掘或训练机器学习模型。
 
-在本网站上浏览这些内容，以及 GitHub 服务条款所允许的对本公开仓库的查看与派生（fork），均不授予任何其他权利。
+在本网站上浏览这些内容，以及 GitHub 服务条款所允许的对本公开仓库的查看与派生（fork），均不授予任何其他权利。保留 AGPL 所要求的版权与许可声明（其中含有作者姓名）无需许可。
 
 ## 三、合理使用
 
@@ -102,4 +102,4 @@ AGPL 是强 Copyleft（具有“传染性”）的许可证：分享修改后的
 - 换上你自己的徽标、图标、纹饰与插图：以相同的导出接口重写 `emblem.js`、`ornaments.js`、`illustrations.js` 与 `xps.js`，并替换 `index.html` 与 `book.css` 中的图标；
 - 换上你自己的图片与音乐。
 
-如需许可，请通过书中书信页上的地址（https://akiyamasuguru.github.io/#letter）或 GitHub（@AkiyamaSuguru）联系作者。
+如需许可，请通过书中书信页上的地址（<https://akiyamasuguru.github.io/#letter>）或 GitHub（@AkiyamaSuguru）联系作者。
